@@ -1,0 +1,41 @@
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Inter", sans-serif;
+  }
+  
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: "Inter var", sans-serif;
+    }
+  }
+.lineMove{
+   @apply w-full bg-transparent border-none h-1 group-hover:bg-[#4353FF] group-hover:-translate-y-1 transform-gpu delay-100 duration-150 ease-in;
+}
+
+.options{
+    @apply font-medium cursor-pointer hover:opacity-70 transition-opacity transform-gpu duration-75  ease-in
+}
+
+
+.heroTitle{
+  @apply text-8xl
+}
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
