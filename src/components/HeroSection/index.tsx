@@ -19,7 +19,7 @@ const index = () => {
         {/* right section */}
         <img src={herobg} height={"100%"} width={"100%"} className=""/>
         <motion.img src={ladder} className="absolute" height={"100%"} width={"100%"} {...slideAnimation("right")}/>
-        <img src={TopMost} className="absolute z-10 right-[10%] top-[21%]"/>
+        <img src={TopMost} className="absolute z-10 right-[10%] top-[32%]"/>
         <img src={middle} className="absolute z-10 right-[29%] mb-20"/>
         <img src={bottomLeft} className="absolute z-10 right-[38%] bottom-32"/>
         <img src={bottomRight} className="absolute z-10 right-[12%] bottom-32"/>

@@ -14,11 +14,11 @@ html {
     }
   }
 .lineMove{
-   @apply w-full bg-transparent border-none h-1 group-hover:bg-[#4353FF] group-hover:-translate-y-1 transform-gpu delay-100 duration-150 ease-in;
+   @apply w-28 mt-16 absolute bg-transparent border-none h-1 group-hover:bg-[#4353FF] group-hover:-translate-y-1 transform-gpu delay-100 duration-150 ease-in;
 }
 
 .options{
-    @apply font-medium cursor-pointer hover:opacity-70 transition-opacity transform-gpu duration-75  ease-in
+    @apply font-medium text-xl cursor-pointer hover:opacity-70 transition-opacity transform-gpu duration-75  ease-in
 }
 
 

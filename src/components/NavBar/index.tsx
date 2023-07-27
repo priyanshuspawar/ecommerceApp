@@ -10,9 +10,9 @@ import cartImg from "../../assets/cart.png";
 
 const index = () => {
   return (
-    <div className="flex flex-row w-min-screen h-16 mx-20">
+    <div className="flex flex-row w-min-screen h-16 px-40 py-12">
         <Logo className="self-center"/>
-        <div className="mx-28 flex">
+        <div className="mx-16 flex justify-evenly flex-grow">
         <NavOptions/>
         <SearchBar/>
         </div>
