@@ -10,7 +10,7 @@ const MainButton = (props:props) => {
     <div className={"flex gap-2 flex-row items-center cursor-pointer"}>
         
         <img src={props?.buttonImg} className="aspect-square h-6"/>
-        <p>{props?.title}</p>
+        <p className="text-xl font-medium">{props?.title}</p>
     </div>
   )
 }
