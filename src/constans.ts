@@ -9,6 +9,17 @@ import instax from "./assets/products/instaxCam.png";
 import duffelBag from "./assets/products/duffleBag.png";
 import toteBag from "./assets/products/toteBag.png";
 import watch from "./assets/products/watch.png";
+import BevMo from "./assets/BevMO.png";
+import Staples from "./assets/staples.png";
+import Sprouts from "./assets/sprouts.png";
+import MollieStone from "./assets/MolllieStone.png";
+import Sports from "./assets/Sports.png";
+import Target from "./assets/target.png";
+import grocery from "./assets/grocery.png";
+import blueBrand from "./assets/blueBrand.png";
+
+ 
+
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -82,6 +93,38 @@ const products = [
     currency: "dollars",
     ProductImage: watch,
   },
+
+
+
 ];
 
-export { navBarOptions, heroScreenText, categories, products };
+
+const Brands=[
+  {
+    id:0 ,title:"Staples" , Description:"Delivery with in 24 hours", Img:Staples
+  },
+  {
+    id:1 ,title:"Sprouts" , Description:"Delivery with in 24 hours", Img:Sprouts
+  },
+  {
+    id:2 ,title:"Grocery Outlet" , Description:"Delivery with in 24 hours", Img:grocery
+  },
+  {
+    id:3 ,title:"Mollie Stone's" , Description:"Delivery with in 24 hours", Img:MollieStone
+  },
+  {
+    id:4 ,title:"Sports Basement" , Description:"Delivery with in 24 hours", Img:Sports
+  },
+  {
+    id:5 ,title:"Container Store" , Description:"Delivery with in 24 hours", Img:blueBrand
+  },
+  {
+    id:6 ,title:"Target" , Description:"Delivery with in 24 hours", Img:Target
+  },
+  {
+    id:7 ,title:"BevMo!" , Description:"Delivery with in 24 hours", Img:BevMo
+  },
+
+];
+
+export { navBarOptions, heroScreenText, categories, products,Brands };

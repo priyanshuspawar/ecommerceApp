@@ -4,6 +4,7 @@ import CategorySecion from "../../components/CategorySection";
 import ProductSlider from "../../components/ProductSlider";
 import HeadBar from "../../components/HeadBar";
 import ChooseBrand from "../../components/ChooseBrand";
+import BestSelling from "../../components/BestSelling";
 
 const index = () => {
   return (
@@ -17,6 +18,7 @@ const index = () => {
           <CategorySecion/>
           <ProductSlider/>
           <ChooseBrand/>
+          <BestSelling/>
         </main>
     
     </section>
