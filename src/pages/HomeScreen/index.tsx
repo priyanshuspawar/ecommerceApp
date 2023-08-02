@@ -7,6 +7,7 @@ import HeadBar from "../../components/HeadBar";
 import ChooseBrand from "../../components/ChooseBrand";
 import DiscountBanner from "../../components/DiscountBanner";
 import CardOfferBanner from "../../components/CardOfferBanner";
+import BestSelling from "../../components/BestSelling";
 
 const index = () => {
   return (
@@ -19,10 +20,14 @@ const index = () => {
           <HeroSection/>
           <CategorySecion/>
           <ProductSlider/>
+
           {/* <ChooseBrand/> */}
           <DealSecion/>
           <DiscountBanner/>
           <CardOfferBanner/>
+
+          <ChooseBrand/>
+          <BestSelling/>
         </main>
     
     </section>
