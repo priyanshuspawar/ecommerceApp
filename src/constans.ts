@@ -9,6 +9,10 @@ import instax from "./assets/products/instaxCam.png";
 import duffelBag from "./assets/products/duffleBag.png";
 import toteBag from "./assets/products/toteBag.png";
 import watch from "./assets/products/watch.png";
+import deal1 from "./assets/deal1.png"
+import deal2 from "./assets/deal2.png"
+import deal3 from "./assets/deal3.png"
+import deal4 from "./assets/deal4.png"
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -84,4 +88,46 @@ const products = [
   },
 ];
 
-export { navBarOptions, heroScreenText, categories, products };
+const deals =[
+  {
+    id:0,
+    title:"Explore Our Furniture & Home Furnishing Range",
+    discount:"100",
+    currency: "dollars",
+    imgPath:deal1,
+    bgColor:"#F2E4D9",
+    textColor:"#CB9917"
+  },
+  {
+    id:1,
+    title:"Explore Our Furniture & Home Furnishing Range",
+    discount:"67",
+    currency: "dollars",
+    imgPath:deal2,
+    bgColor:"#F9DCDC",
+    textColor:"#961F1F"
+  },
+  {
+    id:2,
+    title:"Explore Our Furniture & Home Furnishing Range",
+    discount:"29",
+    currency: "dollars",
+    imgPath:deal3,
+    bgColor:"#F2E4D9",
+    textColor:"#94623C"
+  },
+  {
+    id:3,
+    title:"Explore Our Furniture & Home Furnishing Range",
+    discount:"59",
+    currency: "dollars",
+    imgPath:deal4,
+    bgColor:"#D2F7EC",
+    textColor:"#003D29"
+  },
+
+
+]
+
+
+export { navBarOptions, deals ,heroScreenText, categories, products };

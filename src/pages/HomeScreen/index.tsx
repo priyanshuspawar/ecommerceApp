@@ -1,9 +1,12 @@
 import NavBar from "../../components/NavBar";
 import HeroSection from "../../components/HeroSection";
 import CategorySecion from "../../components/CategorySection";
+import DealSecion from "../../components/DealSection";
 import ProductSlider from "../../components/ProductSlider";
 import HeadBar from "../../components/HeadBar";
 import ChooseBrand from "../../components/ChooseBrand";
+import DiscountBanner from "../../components/DiscountBanner";
+import CardOfferBanner from "../../components/CardOfferBanner";
 
 const index = () => {
   return (
@@ -16,7 +19,10 @@ const index = () => {
           <HeroSection/>
           <CategorySecion/>
           <ProductSlider/>
-          <ChooseBrand/>
+          {/* <ChooseBrand/> */}
+          <DealSecion/>
+          <DiscountBanner/>
+          <CardOfferBanner/>
         </main>
     
     </section>
