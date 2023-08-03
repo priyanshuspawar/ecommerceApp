@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import RatingStars from "./RatingStars";
-import { motion } from "framer-motion";
+
 import AddToCartButton from "./AddToCartButton";
+
 interface props {
   ProductTitle: string;
   ProductImage: string;
@@ -12,7 +13,7 @@ interface props {
   currency: string;
 }
 
-const ProductCard = (props: props) => {
+const ProductCardLarge = (props: props) => {
   const [mousePosition, setmousePosition] = useState({
     x: 0,
     y: 0,
@@ -46,18 +47,18 @@ const ProductCard = (props: props) => {
   };
 
   return (
-    <div className="flex relative flex-col w-max max-w-lg m-4">
+    <div className="flex relative flex-col w-[512px] mr-4 cursor-grabbing snap-start">
       <div
         className="flex overflow-hidden h-80 group 
-     bg-[#F5F6F6] rounded-lg w-max mb-4"
+     bg-[#F5F6F6] rounded-lg w-full mb-4"
       >
         {/* product image */}
         <div className="flex flex-grow  m-6 justify-center hover:scale-125 transition transform-gpu duration-150 delay-75 ease-in items-center">
           <img
             src={props.ProductImage}
-            className="object-contain self-center "
-            width={"90%"}
-            height={"90%"}
+            className="object-contain self-center pointer-events-none"
+            width={"80%"}
+            height={"80%"}
           />
         </div>
 
@@ -93,23 +94,21 @@ const ProductCard = (props: props) => {
       </div>
 
       {/* product details */}
-      <div className="px-1 mb-3">
-      <div className="flex justify-between">
-        <p className="font-semibold text-lg">{props?.ProductTitle}</p>
-        <div className="flex">
-          <p className="font-bold text-sm">$</p>
-          <p className="font-bold text-lg">{`${props?.Price}`}</p>
-          <p className="font-bold text-sm">.00</p>
+      <div className="px-1 mb-3 pointer-events-none">
+        <div className="flex justify-between">
+          <p className="font-semibold text-lg">{props?.ProductTitle}</p>
+          <div className="flex">
+            <p className="font-bold text-sm">$</p>
+            <p className="font-bold text-lg">{`${props?.Price}`}</p>
+            <p className="font-bold text-sm">.00</p>
+          </div>
         </div>
+        <p className="font-light text-xs mb-1">{props?.Description}</p>
+        <RatingStars rating={props?.Rating} ratedUsers={props?.RatedUsers} />
       </div>
-      <p className="font-light text-xs mb-1">{props?.Description}</p>
-      <RatingStars rating={props?.Rating} ratedUsers={props?.RatedUsers}/>
-      </div>
-      <AddToCartButton/>
-
-     
+      <AddToCartButton />
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductCardLarge;

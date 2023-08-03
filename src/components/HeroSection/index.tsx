@@ -13,7 +13,7 @@ import CapsuleButton from "../CapsuleButton"
 const index = () => {
   return (
     <AnimatePresence>
-      <motion.div className="flex scrollbar-hide items-center">
+      <motion.div className="flex items-center">
         
 
         {/* right section */}
