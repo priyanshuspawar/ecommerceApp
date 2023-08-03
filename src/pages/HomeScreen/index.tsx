@@ -8,6 +8,9 @@ import ChooseBrand from "../../components/ChooseBrand";
 import DiscountBanner from "../../components/DiscountBanner";
 import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
+import Services from "../../components/Services";
+
+
 
 const index = () => {
   return (
@@ -28,6 +31,8 @@ const index = () => {
 
           <ChooseBrand/>
           <BestSelling/>
+          <Services/>
+          
         </main>
     
     </section>
