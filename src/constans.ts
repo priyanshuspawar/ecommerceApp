@@ -9,10 +9,10 @@ import instax from "./assets/products/instaxCam.png";
 import duffelBag from "./assets/products/duffleBag.png";
 import toteBag from "./assets/products/toteBag.png";
 import watch from "./assets/products/watch.png";
-import deal1 from "./assets/deal1.png"
-import deal2 from "./assets/deal2.png"
-import deal3 from "./assets/deal3.png"
-import deal4 from "./assets/deal4.png"
+import deal1 from "./assets/deal1.png";
+import deal2 from "./assets/deal2.png";
+import deal3 from "./assets/deal3.png";
+import deal4 from "./assets/deal4.png";
 import BevMo from "./assets/BevMO.png";
 import Staples from "./assets/staples.png";
 import Sprouts from "./assets/sprouts.png";
@@ -21,6 +21,17 @@ import Sports from "./assets/Sports.png";
 import Target from "./assets/target.png";
 import grocery from "./assets/grocery.png";
 import blueBrand from "./assets/blueBrand.png";
+
+
+import bp1 from "./assets/bestProducts/bp1.png";
+import bp2 from "./assets/bestProducts/bp2.png";
+import bp3 from "./assets/bestProducts/bp3.png";
+import bp4 from "./assets/bestProducts/bp4.png";
+import bp5 from "./assets/bestProducts/bp5.png";
+import bp6 from "./assets/bestProducts/bp6.png";
+import bp7 from "./assets/bestProducts/bp7.png";
+import bp8 from "./assets/bestProducts/bp8.png";
+
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -60,7 +71,7 @@ const products = [
     Description: "Selfie mode and selfie mirror, Macro mode",
     Rating: 5,
     RatedUsers: 115,
-    Price: 99.0,
+    Price: 99,
     currency: "dollars",
     ProductImage: instax,
   },
@@ -70,7 +81,7 @@ const products = [
     Description: "Great for base camps",
     Rating: 4,
     RatedUsers: 160,
-    Price: 159.2,
+    Price: 159,
     currency: "dollars",
     ProductImage: duffelBag,
   },
@@ -90,87 +101,193 @@ const products = [
     Description: "Good for time checks",
     Rating: 5,
     RatedUsers: 20,
-    Price: 50.0,
+    Price: 50,
     currency: "dollars",
     ProductImage: watch,
   },
-
-
-
+  {
+    id: 5,
+    ProductTitle: "Watch",
+    Description: "Good for time checks",
+    Rating: 5,
+    RatedUsers: 20,
+    Price: 50,
+    currency: "dollars",
+    ProductImage: watch,
+  },
 ];
 
-
-const Brands=[
+const bestSellingProducts = [
   {
-    id:0 ,title:"Staples" , Description:"Delivery with in 24 hours", Img:Staples
+    id: 0,
+    ProductTitle: "Laptop sleeve MacBook",
+    Description: "Organic Cotton, fairtrade certified",
+    Rating: 4,
+    RatedUsers: 151,
+    Price: 59,
+    currency: "dollars",
+    ProductImage: bp1,
   },
   {
-    id:1 ,title:"Sprouts" , Description:"Delivery with in 24 hours", Img:Sprouts
+    id: 1,
+    ProductTitle: "AirPods Max",
+    Description: "A perfect balance of high-fidelity audio",
+    Rating: 3,
+    RatedUsers: 100,
+    Price: 459,
+    currency: "dollars",
+    ProductImage: bp2,
   },
   {
-    id:2 ,title:"Grocery Outlet" , Description:"Delivery with in 24 hours", Img:grocery
+    id: 2,
+    ProductTitle: "Flower Laptop Sleeve",
+    Description: "15 in. x 10 in. -Flap top closure",
+    Rating: 2,
+    RatedUsers: 40,
+    Price: 39,
+    currency: "dollars",
+    ProductImage: bp3,
   },
   {
-    id:3 ,title:"Mollie Stone's" , Description:"Delivery with in 24 hours", Img:MollieStone
+    id: 3,
+    ProductTitle: "Supreme Water Bottle",
+    Description: "Table with air purifier, stained veneer/black",
+    Rating: 4,
+    RatedUsers: 200,
+    Price: 19,
+    currency: "dollars",
+    ProductImage: bp4,
   },
   {
-    id:4 ,title:"Sports Basement" , Description:"Delivery with in 24 hours", Img:Sports
+    id: 4,
+    ProductTitle: "Laptop sleeve MacBook",
+    Description: "Organic Cotton, fairtrade certified",
+    Rating: 5,
+    RatedUsers: 121,
+    Price: 69,
+    currency: "dollars",
+    ProductImage: bp5,
   },
   {
-    id:5 ,title:"Container Store" , Description:"Delivery with in 24 hours", Img:blueBrand
+    id: 5,
+    ProductTitle: "MacBook pro 13",
+    Description: "256, 8 core GPU, 8 GB",
+    Rating: 5,
+    RatedUsers: 36,
+    Price: 1099,
+    currency: "dollars",
+    ProductImage: bp6,
   },
   {
-    id:6 ,title:"Target" , Description:"Delivery with in 24 hours", Img:Target
+    id: 6,
+    ProductTitle: "HomePod mini",
+    Description: "5 Colors Available",
+    Rating: 2.5,
+    RatedUsers: 10,
+    Price: 59,
+    currency: "dollars",
+    ProductImage: bp7,
   },
   {
-    id:7 ,title:"BevMo!" , Description:"Delivery with in 24 hours", Img:BevMo
+    id: 7,
+    ProductTitle: "Ipad mini",
+    Description: "Mini but powerful",
+    Rating: 4,
+    RatedUsers: 90,
+    Price: 593,
+    currency: "dollars",
+    ProductImage: bp8,
   },
-
 ];
 
-
-const deals =[
+const Brands = [
   {
-    id:0,
-    title:"Explore Our Furniture & Home Furnishing Range",
-    discount:"100",
-    currency: "dollars",
-    imgPath:deal1,
-    bgColor:"#F2E4D9",
-    textColor:"#CB9917"
+    id: 0,
+    title: "Staples",
+    Description: "Delivery with in 24 hours",
+    Img: Staples,
   },
   {
-    id:1,
-    title:"Explore Our Furniture & Home Furnishing Range",
-    discount:"67",
-    currency: "dollars",
-    imgPath:deal2,
-    bgColor:"#F9DCDC",
-    textColor:"#961F1F"
+    id: 1,
+    title: "Sprouts",
+    Description: "Delivery with in 24 hours",
+    Img: Sprouts,
   },
   {
-    id:2,
-    title:"Explore Our Furniture & Home Furnishing Range",
-    discount:"29",
-    currency: "dollars",
-    imgPath:deal3,
-    bgColor:"#F2E4D9",
-    textColor:"#94623C"
+    id: 2,
+    title: "Grocery Outlet",
+    Description: "Delivery with in 24 hours",
+    Img: grocery,
   },
   {
-    id:3,
-    title:"Explore Our Furniture & Home Furnishing Range",
-    discount:"59",
-    currency: "dollars",
-    imgPath:deal4,
-    bgColor:"#D2F7EC",
-    textColor:"#003D29"
+    id: 3,
+    title: "Mollie Stone's",
+    Description: "Delivery with in 24 hours",
+    Img: MollieStone,
   },
+  {
+    id: 4,
+    title: "Sports Basement",
+    Description: "Delivery with in 24 hours",
+    Img: Sports,
+  },
+  {
+    id: 5,
+    title: "Container Store",
+    Description: "Delivery with in 24 hours",
+    Img: blueBrand,
+  },
+  {
+    id: 6,
+    title: "Target",
+    Description: "Delivery with in 24 hours",
+    Img: Target,
+  },
+  {
+    id: 7,
+    title: "BevMo!",
+    Description: "Delivery with in 24 hours",
+    Img: BevMo,
+  },
+];
 
+const deals = [
+  {
+    id: 0,
+    title: "Explore Our Furniture & Home Furnishing Range",
+    discount: "100",
+    currency: "dollars",
+    imgPath: deal1,
+    bgColor: "#F2E4D9",
+    textColor: "#CB9917",
+  },
+  {
+    id: 1,
+    title: "Explore Our Furniture & Home Furnishing Range",
+    discount: "67",
+    currency: "dollars",
+    imgPath: deal2,
+    bgColor: "#F9DCDC",
+    textColor: "#961F1F",
+  },
+  {
+    id: 2,
+    title: "Explore Our Furniture & Home Furnishing Range",
+    discount: "29",
+    currency: "dollars",
+    imgPath: deal3,
+    bgColor: "#F2E4D9",
+    textColor: "#94623C",
+  },
+  {
+    id: 3,
+    title: "Explore Our Furniture & Home Furnishing Range",
+    discount: "59",
+    currency: "dollars",
+    imgPath: deal4,
+    bgColor: "#D2F7EC",
+    textColor: "#003D29",
+  },
+];
 
-]
-
-
-
-export { navBarOptions, heroScreenText, categories, products,Brands,deals };
-
+export { navBarOptions, heroScreenText, categories, products, Brands, deals, bestSellingProducts };
