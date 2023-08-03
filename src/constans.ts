@@ -21,6 +21,17 @@ import Sports from "./assets/Sports.png";
 import Target from "./assets/target.png";
 import grocery from "./assets/grocery.png";
 import blueBrand from "./assets/blueBrand.png";
+import bag from "./assets/bag.png";
+import shoes from "./assets/shoes.png";
+import skincare from "./assets/skincare.png";
+import phone from "./assets/phone.png";
+import nowDeliver from "./assets/nowDeliver.png";
+import Q from "./assets/Q.png";
+import descImg from "./assets/desimg.png";
+import QnA from "./assets/QnA.png";
+import onlinePayment from "./assets/onlinePayment.png";
+import homeDelivery from "./assets/HomeDelivery.png";
+
 
 
 import bp1 from "./assets/bestProducts/bp1.png";
@@ -290,4 +301,76 @@ const deals = [
   },
 ];
 
-export { navBarOptions, heroScreenText, categories, products, Brands, deals, bestSellingProducts };
+
+
+const bestSell=[
+  {
+    id:0,
+    storeImg:Staples,
+    Img:bag,
+    title:"Staples",
+    category:" Bag • Perfume",
+    desImg:descImg,
+    description:"Delivery within 24 hours"
+  },
+  {
+    id:1,
+    storeImg:nowDeliver,
+    Img:phone,
+    title:"Now Delivery",
+    category:" Bag • Perfume",
+    desImg:descImg,
+    description:"Delivery within 24 hours"
+  },
+  {
+    id:2,
+    storeImg:BevMo,
+    Img:skincare,
+    title:"BevMo",
+    category:" Bag • Perfume",
+    desImg:descImg,
+    description:"Delivery within 24 hours"
+  },
+  {
+    id:3,
+    storeImg:Q,
+    Img:shoes,
+    title:"Quicklly",
+    category:" Bag • Perfume",
+    desImg:descImg,
+    description:"Delivery within 24 hours"
+  },
+];
+
+const services=[
+  {
+    id:0,
+    title:"Frequently Asked ",
+    title2:"Questions",
+    description:"Updates on safe Shopping in our Stores",
+    description2:"our Stores",
+    Img:QnA
+  },
+  {
+    id:1,
+    title:"Online Payment",
+    title2:"Process",
+    description:"Updates on safe Shopping in our Stores",
+    description2:"our Stores",
+    Img:onlinePayment
+  },
+  {
+    id:2,
+    title:"Home Delivery",
+    title2:"Options",
+    description:"Updates on safe Shopping in our Stores",
+    description2:"our Stores",
+    Img:homeDelivery
+  },
+];
+
+
+
+export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts};
+
+

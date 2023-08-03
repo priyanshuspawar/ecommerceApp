@@ -10,6 +10,9 @@ import BestDealSection from "../../components/BestDealSection";
 import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
 import TrendingProductSection from "../../components/TrendingProductSection";
+import Services from "../../components/Services";
+
+
 
 const index = () => {
   return (
@@ -32,8 +35,11 @@ const index = () => {
 
           <ChooseBrand/>
           <BestSelling/>
+
           <div className="my-20"/>
           <TrendingProductSection/>
+          <Services/>
+   
         </main>
     
     </section>
