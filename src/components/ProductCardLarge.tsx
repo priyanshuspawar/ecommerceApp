@@ -87,7 +87,7 @@ const ProductCardLarge = (props: props) => {
 
         {/* like button */}
         <div className="flex p-6 absolute right-8 top-0">
-          <div className="absolute z-50 flex-grow w-full h-full bg-red-transparent peer" />
+          <div className="absolute z-50 flex-grow w-full h-full bg-transparent peer" />
           <div className="flex items-center justify-center peer-hover:bg-[#F9DCDC]  bg-white rounded-full absolute h-full w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"

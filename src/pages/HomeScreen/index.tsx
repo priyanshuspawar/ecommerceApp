@@ -18,6 +18,7 @@ import DragHandler from "../../components/ProductSlider/DragHandler";
 
 const index = () => {
   const ref = useRef<HTMLDivElement>(null)
+  const [diff,setDiff] = useState(0);
   const [mousePosition,setmousePosition] = useState({
     x:0,y:0
   })
@@ -28,46 +29,38 @@ const index = () => {
     // })
   }
   const move = (Event:MouseEvent)=>{
+  
     setmousePosition({
-      x:Event.clientX,
-      y:Event.clientY
+      x:Event.pageX-45,
+      y:Event.pageY-45
     })
   }
+
   useEffect(()=>{
     window.addEventListener("mousemove",move)
   },[])
   return (
-    <section className="">
-      <header>
-        <HeadBar/>
+    <div className="flex flex-col w-screen overflow-hidden relative">
+      <motion.div
+          className=" h-[90px] w-[90px] flex absolute z-[5] rounded-full border-[#003D29] border-4 items-center justify-center"
+          // variants={variants}
+          // animate={"default"}
+          style={{translateX:mousePosition.x, translateY:mousePosition.y}}
+        
+        >
+          <p className="text-[#003D29] font-bold text-xl">Drag</p>
+        </motion.div> 
+      
+      <HeadBar/>
         <NavBar/>
-        </header>
-        <main className="">
-          <HeroSection/>
-          <CategorySecion/>
-
-          {/* <DragHandler/> */}
-          {/* <div ref={ref} className="w-screen">
-            <ProductSlider change={change}/>
-            <motion.div style={{translateX:mousePosition.x,translateY:mousePosition.y}} className="w-10 h-10 bg-black absolute z-50 flex">hello</motion.div>
-          </div> */}
-          <ChooseBrand/>
-          <DealSecion/>
-          <DiscountBanner/>
-          <BestDealSection/>
-
-          <CardOfferBanner/>
-
-          <ChooseBrand/>
-          <BestSelling/>
-
-          <div className="my-20"/>
-          <TrendingProductSection/>
-          <Services/>
-   
-        </main>
-        <motion.div style={{translateX:mousePosition.x,translateY:mousePosition.y}} className="w-10 h-10 bg-black absolute z-50 flex">hello</motion.div>
-    </section>
+        <HeroSection/>
+        <CategorySecion/>
+        <div className="peer">
+        <ProductSlider change={()=>{}}/>
+        </div>        
+    {/* <motion.div style={{translateX:mousePosition.x,translateY:mousePosition.y}} className="w-10 h-10 bg-black absolute z-50 hidden peer-hover:flex">hello</motion.div> */}
+    
+    </div>
   )
 }
 
