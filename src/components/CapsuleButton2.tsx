@@ -1,4 +1,3 @@
-
 interface props{
     title:string;
 }

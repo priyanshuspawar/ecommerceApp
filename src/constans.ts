@@ -32,8 +32,6 @@ import QnA from "./assets/QnA.png";
 import onlinePayment from "./assets/onlinePayment.png";
 import homeDelivery from "./assets/HomeDelivery.png";
 
-
-
 import bp1 from "./assets/bestProducts/bp1.png";
 import bp2 from "./assets/bestProducts/bp2.png";
 import bp3 from "./assets/bestProducts/bp3.png";
@@ -42,7 +40,6 @@ import bp5 from "./assets/bestProducts/bp5.png";
 import bp6 from "./assets/bestProducts/bp6.png";
 import bp7 from "./assets/bestProducts/bp7.png";
 import bp8 from "./assets/bestProducts/bp8.png";
-
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -301,76 +298,126 @@ const deals = [
   },
 ];
 
-
-
-const bestSell=[
+const bestSell = [
   {
-    id:0,
-    storeImg:Staples,
-    Img:bag,
-    title:"Staples",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 0,
+    storeImg: Staples,
+    Img: bag,
+    title: "Staples",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:1,
-    storeImg:nowDeliver,
-    Img:phone,
-    title:"Now Delivery",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 1,
+    storeImg: nowDeliver,
+    Img: phone,
+    title: "Now Delivery",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:2,
-    storeImg:BevMo,
-    Img:skincare,
-    title:"BevMo",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 2,
+    storeImg: BevMo,
+    Img: skincare,
+    title: "BevMo",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:3,
-    storeImg:Q,
-    Img:shoes,
-    title:"Quicklly",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 3,
+    storeImg: Q,
+    Img: shoes,
+    title: "Quicklly",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
 ];
 
-const services=[
+const services = [
   {
-    id:0,
-    title:"Frequently Asked ",
-    title2:"Questions",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:QnA
+    id: 0,
+    title: "Frequently Asked ",
+    title2: "Questions",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: QnA,
   },
   {
-    id:1,
-    title:"Online Payment",
-    title2:"Process",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:onlinePayment
+    id: 1,
+    title: "Online Payment",
+    title2: "Process",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: onlinePayment,
   },
   {
-    id:2,
-    title:"Home Delivery",
-    title2:"Options",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:homeDelivery
+    id: 2,
+    title: "Home Delivery",
+    title2: "Options",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: homeDelivery,
   },
 ];
 
+const footer = {
+  "Department": [
+    "Fashion",
+    "Education Product",
+    "Frozen Food",
+    "Beverages",
+    "Organic Grocery",
+    "Office Supplies",
+    "Beauty Products",
+    "Books",
+    "Electronics & Gadget",
+    "Travel Accessories",
+    "Fitness",
+    "Sneakers",
+    "Toys",
+    "Furniture",
+  ],
+  "About Us":[
+    "About Shopcart",
+    "Careers",
+    "News & blog",
+    "Help",
+    "Press Center",
+    "Shop By Location",
+    "Shopcart Brands",
+    "Affiliate & Partners",
+    "Ideas & Guides",
+  ],
+  "Services":[
+    "Gift Card",
+    "Mobile App",
+    "Shipping & Delivery",
+    "Order Pickup",
+    "Account Signup",
+  ],
+  "Help":[
+    "Shopcart Help",
+    "Returns",
+    "Track Orders",
+    "Contact Us",
+    "Feedback",
+    "Security & Fraud"
+  ]
+};
 
-
-export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts};
-
-
+export {
+  navBarOptions,
+  heroScreenText,
+  categories,
+  products,
+  Brands,
+  deals,
+  bestSell,
+  services,
+  bestSellingProducts,
+  footer
+};

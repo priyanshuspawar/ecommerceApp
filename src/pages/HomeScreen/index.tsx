@@ -11,12 +11,33 @@ import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
 import TrendingProductSection from "../../components/TrendingProductSection";
 import Services from "../../components/Services";
-
+import { motion } from "framer-motion";
+import { useState,useRef, useEffect } from "react";
+import DragHandler from "../../components/ProductSlider/DragHandler";
 
 
 const index = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [mousePosition,setmousePosition] = useState({
+    x:0,y:0
+  })
+  const change = (x:number,y:number) =>{
+    // setmousePosition({
+    //   x:x,
+    //   y:y
+    // })
+  }
+  const move = (Event:MouseEvent)=>{
+    setmousePosition({
+      x:Event.clientX,
+      y:Event.clientY
+    })
+  }
+  useEffect(()=>{
+    window.addEventListener("mousemove",move)
+  },[])
   return (
-    <section className="overflow-x-hidden">
+    <section className="">
       <header>
         <HeadBar/>
         <NavBar/>
@@ -24,9 +45,13 @@ const index = () => {
         <main className="">
           <HeroSection/>
           <CategorySecion/>
-          <ProductSlider/>
 
-          {/* <ChooseBrand/> */}
+          {/* <DragHandler/> */}
+          {/* <div ref={ref} className="w-screen">
+            <ProductSlider change={change}/>
+            <motion.div style={{translateX:mousePosition.x,translateY:mousePosition.y}} className="w-10 h-10 bg-black absolute z-50 flex">hello</motion.div>
+          </div> */}
+          <ChooseBrand/>
           <DealSecion/>
           <DiscountBanner/>
           <BestDealSection/>
@@ -41,7 +66,7 @@ const index = () => {
           <Services/>
    
         </main>
-    
+        <motion.div style={{translateX:mousePosition.x,translateY:mousePosition.y}} className="w-10 h-10 bg-black absolute z-50 flex">hello</motion.div>
     </section>
   )
 }

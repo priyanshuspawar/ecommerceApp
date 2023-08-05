@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import RatingStars from "./RatingStars";
 
 import AddToCartButton from "./AddToCartButton";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface props {
   ProductTitle: string;
@@ -14,40 +15,62 @@ interface props {
 }
 
 const ProductCardLarge = (props: props) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [showCursor,setShowCursor] = useState(false);
   const [mousePosition, setmousePosition] = useState({
     x: 0,
     y: 0,
+
   });
 
   useEffect(() => {
     const mouseMove = (event: MouseEvent) => {
+        
       setmousePosition({
         x: event.clientX,
         y: event.clientY,
       });
     };
-    window.addEventListener("mousemove", mouseMove);
+    const mouseEnter = (event: MouseEvent) => {
+      setShowCursor(true);
+    }
+    const mouseOut = (event: MouseEvent) =>{
+      setShowCursor(false);
+    }
+
+    let divElement = ref.current;
+    if(divElement){
+      // divElement.addEventListener("mouseenter",mouseEnter)
+      divElement.addEventListener("mousemove", mouseMove)
+      // divElement.addEventListener("mouseout",mouseOut)
+    }
+  
 
     return () => {
-      console.log("clean up");
-      window.removeEventListener("mousemove", mouseMove);
+      divElement!=null?
+      
+      divElement.removeEventListener("mousemove", mouseMove):"";
     };
   }, []);
+  // const style={
+  //   translateX:mousePosition.x,
+  //   translateY:mousePosition.y
+  // }
 
   const variants = {
+    
     default: {
-      x: mousePosition.x - 90,
-      y: mousePosition.y - window.innerHeight * 0.5,
+      x: mousePosition.x,
+      y: mousePosition.y,
     },
     transition: {
       type: "spring",
-      duration: 0.8,
-      mass: 0.4,
     },
   };
 
   return (
-    <div className="flex relative flex-col w-[512px] mr-4 cursor-grabbing snap-start">
+
+    <div ref={ref} className="flex relative flex-col  mr-4 cursor-grabbing flex-grow">
       <div
         className="flex overflow-hidden h-80 group 
      bg-[#F5F6F6] rounded-lg w-full mb-4"
@@ -57,8 +80,8 @@ const ProductCardLarge = (props: props) => {
           <img
             src={props.ProductImage}
             className="object-contain self-center pointer-events-none"
-            width={"80%"}
-            height={"80%"}
+            width={"65%"}
+            height={"65%"}
           />
         </div>
 
