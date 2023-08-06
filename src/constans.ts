@@ -56,6 +56,18 @@ const categories = [
   { id: 5, title: "Travel", backdrop: travel },
 ];
 
+const genre = [
+  { id: 0, title: "Gadgets"},
+  { id: 1, title: "Fashion"},
+  { id: 2, title: "Toys"},
+  { id: 3, title: "Education"},
+  { id: 4, title: "Beauty"},
+  { id: 5, title: "Fitness"},
+  { id: 6, title: "Furniture"},
+  { id: 7, title: "Sneakers"},
+]
+
+
 const heroScreenText = {
   title: "Shopping And Department Store.",
   description:
@@ -419,5 +431,6 @@ export {
   bestSell,
   services,
   bestSellingProducts,
-  footer
+  footer,
+  genre
 };

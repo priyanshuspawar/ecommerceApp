@@ -1,92 +1,35 @@
-import { useEffect, useState,useRef } from "react";
+import { useState, RefObject, useEffect } from "react";
 
-
-import { motion, useMotionValue, useAnimation } from "framer-motion";
-import "swiper/css";
-import "swiper/css/pagination";
-import Element from "./Element";
-
-import {Swiper ,SwiperSlide } from "swiper/react";
-
-function DragHandler() {
-
-  const [showing, setShowing] = useState(false);
-  const newRef = useRef<HTMLDivElement>(null);
-  const ref = useRef<HTMLDivElement>(null);
-
-
-
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const arrSlide = ["s1", "s1", "s1", "s1", "s1", "s1", "s1", "s1", "s1", "s1"];
-  
-  
-  const mouseEnter = (i:number) => {
-    // setShowing(true)
+export function DragHandler(ref: RefObject<HTMLElement>,index: number) {
+  const [point, setPoint] = useState({ x: 0, y: 0 });
+  const [refresh,setRefresh]=useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
     
-  };
+    const initialOffsetTop = ref.current?.offsetTop;
 
-  const mouseMove = (event: MouseEvent) => {
-    // console.log(ref.current?.offsetWidth,ref.current?.clientWidth,event.clientX)
-    if(event){
-      setMousePosition({
-        x:event.clientX,
-        y:event.clientY
-      })
-    }
-  };
-  const mouseOut = ()=>{
-    setShowing(false)
-  }
-  const variants = {
-    default: {
-      x: mousePosition.x-40,
-      y: mousePosition.y-40,
-    },
-    transition:{
-      type:"spring",
-      duration: "0.5"
-    }
-  };
-
-  useEffect(()=>{
-    newRef.current?.addEventListener("mousemove",mouseMove);
-    
-  },[])
-
-
-  return (
-    <div className="w-screen h-80 flex relative">
+    const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {
+      const left = ref.current?.getBoundingClientRect().left;
       
-      <Swiper className="w-[100%] h-56 peer" onDragEnter={(event)=>{console.log(event)
-      ;
-      }}
-      slidesPerView={3}
-          >
-        {arrSlide.map((e,i)=>{
-          return(
-            
-              <SwiperSlide  onMouseMove={()=>mouseEnter(i)} key={i}>
-                <div ref={ref}>
-                <Element/>
-                </div>
-            </SwiperSlide>
-          )
-        })}
-      </Swiper>
+      if(left){
+        const element = ref.current!;
+        const x = clientX - left;
+        const y = clientY - initialOffsetTop - element.offsetHeight / 2;
+        setPoint({ x, y });
 
-      <motion.div
-        className="w-[80px] block h-[80px] items-center justify-center rounded-full bg-white pointer-events-none absolute z-50"
-        // style={{display:"flex"}}
-        variants={variants}
-        animate={"default"}
-      >
-        helllo
-      </motion.div>
-    </div>
-  );
+      }
+
+    };
+
+  
+    ref.current?.addEventListener("pointermove", handlePointerMove);
+    
+
+    return () => {ref.current?.removeEventListener("pointermove", handlePointerMove)
+    
+    setPoint({x:0,y:0})
+  };
+  }, [ref,refresh]);
+
+  return point;
 }
-
-export default DragHandler;

@@ -16,9 +16,11 @@ const RatingStars = ({rating,ratedUsers}:props) => {
   return (
     <div className="flex items-center">
     <div className="flex gap-1 w-20">
-      {ratingsArray.map(()=>{
+      {ratingsArray.map((e)=>{
         return(
+          <div key={e}>
           <RatingStar/>
+          </div>
         )
       })}
       {!isHalfRating&&<HalfRatingStar/>}
