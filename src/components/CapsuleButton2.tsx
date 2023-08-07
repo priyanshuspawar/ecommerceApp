@@ -1,14 +1,17 @@
-
-interface props{
-    title:string;
+interface props {
+  title: string;
+  style?: string;
 }
 
-const CapsuleButton2 = (props:props) => {
+const CapsuleButton2 = ({
+  title,
+  style = " w-40 h-16 hover:bg-[#003D29] bg-black items-center justify-center font-bold text-xl text-white flex rounded-full",
+}: props) => {
   return (
-    <div className=" w-40 h-16 hover:bg-[#003D29] bg-black items-center justify-center font-bold text-xl text-white flex rounded-full">
-        <p>{props.title}</p>
+    <div className={style}>
+      <p>{title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default CapsuleButton2
+export default CapsuleButton2;

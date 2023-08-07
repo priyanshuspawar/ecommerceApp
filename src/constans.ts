@@ -35,6 +35,7 @@ import homeDelivery from "./assets/HomeDelivery.png";
 
 
 
+
 import Stripe from "./assets/stripe.png";
 import Visa from "./assets/Visa.png";
 import MCard from "./assets/masterCard.png";
@@ -46,6 +47,7 @@ import Gpay from "./assets/GPay.png";
 
 
 
+
 import bp1 from "./assets/bestProducts/bp1.png";
 import bp2 from "./assets/bestProducts/bp2.png";
 import bp3 from "./assets/bestProducts/bp3.png";
@@ -54,7 +56,6 @@ import bp5 from "./assets/bestProducts/bp5.png";
 import bp6 from "./assets/bestProducts/bp6.png";
 import bp7 from "./assets/bestProducts/bp7.png";
 import bp8 from "./assets/bestProducts/bp8.png";
-
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -70,6 +71,18 @@ const categories = [
   { id: 4, title: "Sneakers", backdrop: sneakers },
   { id: 5, title: "Travel", backdrop: travel },
 ];
+
+const genre = [
+  { id: 0, title: "Gadgets"},
+  { id: 1, title: "Fashion"},
+  { id: 2, title: "Toys"},
+  { id: 3, title: "Education"},
+  { id: 4, title: "Beauty"},
+  { id: 5, title: "Fitness"},
+  { id: 6, title: "Furniture"},
+  { id: 7, title: "Sneakers"},
+]
+
 
 const heroScreenText = {
   title: "Shopping And Department Store.",
@@ -128,16 +141,16 @@ const products = [
     currency: "dollars",
     ProductImage: watch,
   },
-  {
-    id: 5,
-    ProductTitle: "Watch",
-    Description: "Good for time checks",
-    Rating: 5,
-    RatedUsers: 20,
-    Price: 50,
-    currency: "dollars",
-    ProductImage: watch,
-  },
+  // {
+  //   id: 5,
+  //   ProductTitle: "Watch",
+  //   Description: "Good for time checks",
+  //   Rating: 5,
+  //   RatedUsers: 20,
+  //   Price: 50,
+  //   currency: "dollars",
+  //   ProductImage: watch,
+  // },
 ];
 
 const bestSellingProducts = [
@@ -313,73 +326,117 @@ const deals = [
   },
 ];
 
-
-
-const bestSell=[
+const bestSell = [
   {
-    id:0,
-    storeImg:Staples,
-    Img:bag,
-    title:"Staples",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 0,
+    storeImg: Staples,
+    Img: bag,
+    title: "Staples",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:1,
-    storeImg:nowDeliver,
-    Img:phone,
-    title:"Now Delivery",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 1,
+    storeImg: nowDeliver,
+    Img: phone,
+    title: "Now Delivery",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:2,
-    storeImg:BevMo,
-    Img:skincare,
-    title:"BevMo",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 2,
+    storeImg: BevMo,
+    Img: skincare,
+    title: "BevMo",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
   {
-    id:3,
-    storeImg:Q,
-    Img:shoes,
-    title:"Quicklly",
-    category:" Bag • Perfume",
-    desImg:descImg,
-    description:"Delivery within 24 hours"
+    id: 3,
+    storeImg: Q,
+    Img: shoes,
+    title: "Quicklly",
+    category: " Bag • Perfume",
+    desImg: descImg,
+    description: "Delivery within 24 hours",
   },
 ];
 
-const services=[
+const services = [
   {
-    id:0,
-    title:"Frequently Asked ",
-    title2:"Questions",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:QnA
+    id: 0,
+    title: "Frequently Asked ",
+    title2: "Questions",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: QnA,
   },
   {
-    id:1,
-    title:"Online Payment",
-    title2:"Process",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:onlinePayment
+    id: 1,
+    title: "Online Payment",
+    title2: "Process",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: onlinePayment,
   },
   {
-    id:2,
-    title:"Home Delivery",
-    title2:"Options",
-    description:"Updates on safe Shopping in our Stores",
-    description2:"our Stores",
-    Img:homeDelivery
+    id: 2,
+    title: "Home Delivery",
+    title2: "Options",
+    description: "Updates on safe Shopping in our Stores",
+    description2: "our Stores",
+    Img: homeDelivery,
   },
 ];
+
+const footer = {
+  "Department": [
+    "Fashion",
+    "Education Product",
+    "Frozen Food",
+    "Beverages",
+    "Organic Grocery",
+    "Office Supplies",
+    "Beauty Products",
+    "Books",
+    "Electronics & Gadget",
+    "Travel Accessories",
+    "Fitness",
+    "Sneakers",
+    "Toys",
+    "Furniture",
+  ],
+  "About Us":[
+    "About Shopcart",
+    "Careers",
+    "News & blog",
+    "Help",
+    "Press Center",
+    "Shop By Location",
+    "Shopcart Brands",
+    "Affiliate & Partners",
+    "Ideas & Guides",
+  ],
+  "Services":[
+    "Gift Card",
+    "Mobile App",
+    "Shipping & Delivery",
+    "Order Pickup",
+    "Account Signup",
+  ],
+  "Help":[
+    "Shopcart Help",
+    "Returns",
+    "Track Orders",
+    "Contact Us",
+    "Feedback",
+    "Security & Fraud"
+  ]
+};
+
 
 
 const footer = {
@@ -461,6 +518,7 @@ const Payment=[
 
 
 
-export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment};
+export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre};
+
 
 

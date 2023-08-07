@@ -18,20 +18,6 @@ const ProductCard = (props: props) => {
     y: 0,
   });
 
-  useEffect(() => {
-    const mouseMove = (event: MouseEvent) => {
-      setmousePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-    };
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      console.log("clean up");
-      window.removeEventListener("mousemove", mouseMove);
-    };
-  }, []);
 
   const variants = {
     default: {

@@ -18,38 +18,34 @@ import Footer from "../../components/Footer";
 
 
 
+
 const index = () => {
+
+
   return (
-    <section className="overflow-x-hidden">
-      <header>
-        <HeadBar/>
+    <div className="flex flex-col w-screen overflow-hidden relative">
+
+      
+      <HeadBar/>
         <NavBar/>
-        </header>
-        <main className="">
-          <HeroSection/>
-          <CategorySecion/>
-          <ProductSlider/>
 
-          {/* <ChooseBrand/> */}
-          <DealSecion/>
-          <DiscountBanner/>
-          <BestDealSection/>
+        <HeroSection/>
+        <CategorySecion/>
+        <ProductSlider title="Weekly Popular Products"/>
+        <ChooseBrand/>
+        <DealSecion/>
+        <ProductSlider title={"Todays Best Deals For You!"}/>
+        <DiscountBanner/>
+        {/* small card section */}
+        <BestDealSection/>
+        <CardOfferBanner/>
+        <ProductSlider title="Most Selling Products"/>
+        <TrendingProductSection/>
+        <BestSelling/>
+        <Services/>
+         <Footer/>
+    </div>
 
-          <CardOfferBanner/>
-
-          <ChooseBrand/>
-          <BestSelling/>
-
-          <div className="my-20"/>
-          <TrendingProductSection/>
-          <Services/>
-          <Footer/>
-          
-
-   
-        </main>
-    
-    </section>
   )
 }
 

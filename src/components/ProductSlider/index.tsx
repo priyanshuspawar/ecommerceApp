@@ -1,121 +1,71 @@
-import { ScrollMotionValues, motion , useMotionValue,PanInfo} from "framer-motion";
 import { products } from "../../constans";
-import { useEffect, useRef, useState } from "react";
 import ProductCardLarge from "../ProductCardLarge";
-import ScrollContainer from "react-indiana-drag-scroll";
 
-
-const index = () => {
-  // const [width, setWidth] = useState(0);
-  // const carousel = useRef<any>(null);
-  // const dragOffset = useMotionValue(0);
-
-
-  // const handleDrag = (event: MouseEvent | TouchEvent, info: PanInfo) => {
-  //   // Update the drag offset when the drag starts
-  //   if (info.offset.x === 0) {
-  //     dragOffset.set(info.point.x);
-  //   }
-  // };
+import "swiper/css";
+import "swiper/css/pagination";
 
 
 
+import { Swiper, SwiperSlide } from "swiper/react";
 
-  // useEffect(() => {
-  //   // setWidth(carousel.current.scrollWidth-carousel.current.offsetWidth);
-  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, []);
+
+interface props{
+  title: string;
+}
+
+const index = ({title}:props) => {
+  
+  const handleChange = (swiper: any) => {
+    const progressBar = document.querySelector(".progress-bar") as HTMLElement;
+    if (swiper.progress > 0.05) {
+      progressBar.style.width = `${swiper.progress * 100}%`;
+    } else {
+      progressBar.style.width = `${0.05 * 100}%`;
+    }
+  };
+
 
   return (
+    <div className="relative ">
+
+      <p className="font-bold text-3xl mb-8 mx-36">{title}</p>
 
 
-    <div className="flex flex-col bg-white items-center justify-center">
-      {/* <div
-        className="flex overflow-x-scroll w-[85%] snap-x"
-      >
+
+      <div className="w-full flex flex-col relative gap-y-14 my-8">
+        <Swiper
+          className="w-[85%]"
+          slidesPerView={3}
+          spaceBetween={13}
+          onTransitionEnd={handleChange}
+        >
+          {products.map((product, index) => (
+            <SwiperSlide className="flex w-[31%]" key={index}>
+              <ProductCardLarge
+                key={index}
+                ProductTitle={product.ProductTitle}
+                ProductImage={product.ProductImage}
+                Description={product.Description}
+                Rating={product.Rating}
+                RatedUsers={product.RatedUsers}
+                Price={product.Price}
+                currency={product.currency}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
         
-        <div
-          className="flex flex-nowrap "
-        >
-                    {products.map((product) => {
-            return (
-              <ProductCardLarge
-                ProductTitle={product.ProductTitle} ProductImage={product.ProductImage} Description={product.Description} Rating={product.Rating} RatedUsers={product.RatedUsers} Price={product.Price} currency={product.currency}
-              />
-            );
-          })}
-
+       <div className="w-full flex justify-center items-center">
+        <div className=" w-[85%] h-1 bg-[#D3D2D2]">
+          <div
+            className="progress-bar h-1 bg-black w-[10%] transition transform-gpu duration-100"
+            
+            style={{ transition: "width 0.1s ease-in-out" }}
+          ></div>
         </div>
-      </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // <div className="w-max">
-    //   <p className="font-bold text-3xl mb-10  mt-16 ml-28">Todays Best Deals For You!</p>
-    // <div className=" flex w-fit overflow-x-scroll snap-x">
-    //   <div className="flex flex-nowrap">
-    //     {products.map((product) => {
-    //         return (
-    //           <ProductCardLarge
-    //             ProductTitle={product.ProductTitle} ProductImage={product.ProductImage} Description={product.Description} Rating={product.Rating} RatedUsers={product.RatedUsers} Price={product.Price} currency={product.currency}
-    //           />
-    //         );
-    //       })}
-
-
-    //   </div>
-
-
-      /* <motion.div ref={carousel} className="flex overflow-hidden w-[83%]">
-        <motion.div
-          drag={"x"}
-          dragConstraints={{ right: 0,left:-width }}
-          onDrag={handleDrag}
-          className="flex"
-        >
-          {products.map((product) => {
-            return (
-              <ProductCardLarge
-                ProductTitle={product.ProductTitle} ProductImage={product.ProductImage} Description={product.Description} Rating={product.Rating} RatedUsers={product.RatedUsers} Price={product.Price} currency={product.currency}
-              />
-            );
-          })}
-        </motion.div>
-      </motion.div> */
-    /* </div> */
-    // </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
