@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import discountBanner from "../assets/discountBanner.png";
 import { motion, useScroll, useTransform } from "framer-motion";
+import CapsuleButton from "./CapsuleButton";
 
 const DiscountBanner = () => {
     const ref = useRef(null);
@@ -28,6 +29,7 @@ const DiscountBanner = () => {
             <div className="w-[530px] h-[439px] bg-[#003D29] absolute z-10 right-48 p-16">
                 <p className="font-extrabold text-[55px] text-white">Get 5% Cash Back On $200</p>
                 <p className="font-medium text-xl text-white">Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.</p>
+                <CapsuleButton borderEnable={true}/>
             </div>
 
     </div>
