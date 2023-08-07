@@ -125,16 +125,16 @@ const products = [
     currency: "dollars",
     ProductImage: watch,
   },
-  {
-    id: 5,
-    ProductTitle: "Watch",
-    Description: "Good for time checks",
-    Rating: 5,
-    RatedUsers: 20,
-    Price: 50,
-    currency: "dollars",
-    ProductImage: watch,
-  },
+  // {
+  //   id: 5,
+  //   ProductTitle: "Watch",
+  //   Description: "Good for time checks",
+  //   Rating: 5,
+  //   RatedUsers: 20,
+  //   Price: 50,
+  //   currency: "dollars",
+  //   ProductImage: watch,
+  // },
 ];
 
 const bestSellingProducts = [

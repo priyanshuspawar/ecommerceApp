@@ -41,7 +41,7 @@ const ProductCardLarge = (props: props) => {
 
         <img
           src={props.ProductImage}
-          className="object-contain aspect-square m-auto pointer-events-none"
+        className="object-contain aspect-square m-auto pointer-events-none group-hover:scale-[115%] transition transform-gpu duration-150 ease-in"
           width={"80%"}
           height={"80%"}
         />
