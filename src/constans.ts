@@ -32,6 +32,22 @@ import QnA from "./assets/QnA.png";
 import onlinePayment from "./assets/onlinePayment.png";
 import homeDelivery from "./assets/HomeDelivery.png";
 
+
+
+
+
+import Stripe from "./assets/stripe.png";
+import Visa from "./assets/Visa.png";
+import MCard from "./assets/masterCard.png";
+import Amazon from "./assets/amazon.png";
+import klarna from "./assets/klarna.png";
+import paypal from "./assets/payPal.png";
+import applepay from "./assets/applePay.png";
+import Gpay from "./assets/GPay.png";
+
+
+
+
 import bp1 from "./assets/bestProducts/bp1.png";
 import bp2 from "./assets/bestProducts/bp2.png";
 import bp3 from "./assets/bestProducts/bp3.png";
@@ -421,16 +437,88 @@ const footer = {
   ]
 };
 
-export {
-  navBarOptions,
-  heroScreenText,
-  categories,
-  products,
-  Brands,
-  deals,
-  bestSell,
-  services,
-  bestSellingProducts,
-  footer,
-  genre
+
+
+const footer = {
+  
+  "ShopCart":[
+    "Amet minim mollit non deserunt ullamco est sit aliqua",
+    "dolor do amet sint. Velit officia consequat duis enim velit",
+    "mollit."
+  ],
+  "Department": [
+    "Fashion",
+    "Education Product",
+    "Frozen Food",
+    "Beverages",
+    "Organic Grocery",
+    "Office Supplies",
+    "Beauty Products",
+    "Books",
+    "Electronics & Gadget",
+    "Travel Accessories",
+    "Fitness",
+    "Sneakers",
+    "Toys",
+    "Furniture",
+  ],
+  "About Us":[
+    "About Shopcart",
+    "Careers",
+    "News & blog",
+    "Help",
+    "Press Center",
+    "Shop By Location",
+    "Shopcart Brands",
+    "Affiliate & Partners",
+    "Ideas & Guides",
+  ],
+  "Services":[
+    "Gift Card",
+    "Mobile App",
+    "Shipping & Delivery",
+    "Order Pickup",
+    "Account Signup",
+  ],
+  "Help":[
+    "Shopcart Help",
+    "Returns",
+    "Track Orders",
+    "Contact Us",
+    "Feedback",
+    "Security & Fraud"
+  ]
 };
+const Payment=[
+     {
+      Img:Stripe
+     },
+     {
+      Img:Visa
+     },
+     {
+      Img:MCard
+     },
+     {
+      Img:Amazon
+     },
+     {
+      Img:klarna
+     },
+     {
+      Img:paypal
+     },
+     {
+      Img:applepay
+     },
+     {
+      Img:Gpay
+     },
+];
+
+
+
+export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre};
+
+
+

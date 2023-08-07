@@ -35,7 +35,7 @@ const index = () => {
             {heroScreenText.description}
           </motion.p>
           {/* learn more */}
-          <CapsuleButton/>
+          <CapsuleButton />
 
         </motion.div>
       </motion.div>

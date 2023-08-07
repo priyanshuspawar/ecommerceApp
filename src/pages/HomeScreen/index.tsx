@@ -11,6 +11,10 @@ import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
 import TrendingProductSection from "../../components/TrendingProductSection";
 import Services from "../../components/Services";
+import Footer from "../../components/Footer";
+
+
+
 
 
 
@@ -24,6 +28,7 @@ const index = () => {
       
       <HeadBar/>
         <NavBar/>
+
         <HeroSection/>
         <CategorySecion/>
         <ProductSlider title="Weekly Popular Products"/>
@@ -38,8 +43,9 @@ const index = () => {
         <TrendingProductSection/>
         <BestSelling/>
         <Services/>
-        
+         <Footer/>
     </div>
+
   )
 }
 
