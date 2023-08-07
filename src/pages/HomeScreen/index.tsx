@@ -11,6 +11,10 @@ import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
 import TrendingProductSection from "../../components/TrendingProductSection";
 import Services from "../../components/Services";
+import Footer from "../../components/Footer";
+
+
+
 
 
 
@@ -39,6 +43,9 @@ const index = () => {
           <div className="my-20"/>
           <TrendingProductSection/>
           <Services/>
+          <Footer/>
+          
+
    
         </main>
     

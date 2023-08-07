@@ -6,7 +6,7 @@ const Services=()=>{
         <div className="flex flex-row gap-5 mx-36 ">
             {services.map(e=>{
                 return(
-                    <div className="bg-[#F5F6F6] rounded-xl flex flex-col  group w-[450px] h-[480px]" >
+                    <div className="bg-[#F5F6F6] rounded-xl flex flex-col  group w-[450px] h-[512x]" >
                         <div className="h-[45%] p-8">
                         <p className="font-bold text-2xl">{e.title}</p>
                         <p className="font-bold text-2xl mb-3">{e.title2}</p>
