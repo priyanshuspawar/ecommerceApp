@@ -4,8 +4,8 @@ import { bestSell } from "../constans"
 const BestSelling = () => {
     
     return(
-        <><p className="font-bold text-3xl mb-8 mx-36">Best Selling Store </p>
-        <div className="flex flex-row gap-2 mx-36 ">
+        <><p className="font-bold text-3xl mb-8 mx-32 mt-28">Best Selling Store </p>
+        <div className="flex flex-row gap-2 mx-32 ">
             {bestSell.map(store => {
                 return (
                     <div className="   w-80  rounded-xl flex flex-col relative p-2 group ">

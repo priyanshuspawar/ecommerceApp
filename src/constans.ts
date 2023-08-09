@@ -44,6 +44,10 @@ import klarna from "./assets/klarna.png";
 import paypal from "./assets/payPal.png";
 import applepay from "./assets/applePay.png";
 import Gpay from "./assets/GPay.png";
+import becomeSeller from "./assets/becomeSeller.png";
+import GiftCard from "./assets/giftCard.png";
+import HelpCenter from "./assets/helpCenter.png";
+
 
 
 
@@ -469,10 +473,26 @@ const Payment=[
       Img:Gpay
      },
 ];
+ const Last=[
+  {
+    id:0,
+    Img:becomeSeller,
+    title:"Become Seller"
+  },
+  {
+    id:2,
+    Img:GiftCard,
+    title:"Gift Cards"
+  },
+  {
+    id:2,
+    Img:HelpCenter,
+    title:"Help Center"
+  },
+ ]
 
 
-
-export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre};
+export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre,Last};
 
 
 

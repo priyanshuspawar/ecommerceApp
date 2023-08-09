@@ -1,19 +1,49 @@
 import { bestSellingProducts,genre } from "../../constans";
 import CapsuleButton2 from "../CapsuleButton2";
 import ProductCard from "../ProductCard";
+import GenreButton from "../GenreButton";
+import { useState } from "react";
+
 const index = () => {
+
+   const initialArr=genre.map((e,i)=>{
+    if(i===0){
+      return(
+        {id:i,active:true}
+      )
+    }
+       return(
+        {id:i, active:false}
+       )
+   })  
+  const [isClicked, setIsClicked] = useState(initialArr);
+  const onClick=(index:number)=>{
+    const newArr=isClicked.map((e,i)=>{
+
+      if(i===index){
+        return(
+          {id:index,active:true}
+        )
+      }
+      return(
+        {id:i,active:false}
+      )
+    })
+  
+    setIsClicked(newArr)
+
+  }
   return (
     <div className="flex flex-col my-10 items-center">
       <p className="font-bold text-4xl mb-10 w-[85%]">Todays Best Deals For You!</p>
       <div className="flex gap-x-3 mb-8 w-[85%]">
-        {genre.map(genre =>
+        {genre.map((genre,index) =>
         <div key={genre.id}>
-          <CapsuleButton2 title={genre.title}
-          style="bg-white active:bg-[#003D29] active:text-white text-black border-[1px] border-slate-200 flex items-center justify-center
-          text-base font-medium rounded-full px-6 py-3
-          cursor-pointer
-        "
-        
+          <GenreButton title={genre.title}
+          isClicked={isClicked[index].active}
+        onClick={()=>{
+          onClick(index)
+        }}
           />
         </div>)}
       </div>
