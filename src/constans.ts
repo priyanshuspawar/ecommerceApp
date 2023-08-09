@@ -44,6 +44,10 @@ import klarna from "./assets/klarna.png";
 import paypal from "./assets/payPal.png";
 import applepay from "./assets/applePay.png";
 import Gpay from "./assets/GPay.png";
+import becomeSeller from "./assets/becomeSeller.png";
+import GiftCard from "./assets/giftCard.png";
+import HelpCenter from "./assets/helpCenter.png";
+
 
 
 
@@ -392,50 +396,6 @@ const services = [
   },
 ];
 
-const footer = {
-  "Department": [
-    "Fashion",
-    "Education Product",
-    "Frozen Food",
-    "Beverages",
-    "Organic Grocery",
-    "Office Supplies",
-    "Beauty Products",
-    "Books",
-    "Electronics & Gadget",
-    "Travel Accessories",
-    "Fitness",
-    "Sneakers",
-    "Toys",
-    "Furniture",
-  ],
-  "About Us":[
-    "About Shopcart",
-    "Careers",
-    "News & blog",
-    "Help",
-    "Press Center",
-    "Shop By Location",
-    "Shopcart Brands",
-    "Affiliate & Partners",
-    "Ideas & Guides",
-  ],
-  "Services":[
-    "Gift Card",
-    "Mobile App",
-    "Shipping & Delivery",
-    "Order Pickup",
-    "Account Signup",
-  ],
-  "Help":[
-    "Shopcart Help",
-    "Returns",
-    "Track Orders",
-    "Contact Us",
-    "Feedback",
-    "Security & Fraud"
-  ]
-};
 
 
 
@@ -515,10 +475,26 @@ const Payment=[
       Img:Gpay
      },
 ];
+ const Last=[
+  {
+    id:0,
+    Img:becomeSeller,
+    title:"Become Seller"
+  },
+  {
+    id:2,
+    Img:GiftCard,
+    title:"Gift Cards"
+  },
+  {
+    id:2,
+    Img:HelpCenter,
+    title:"Help Center"
+  },
+ ]
 
 
-
-export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre};
+export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre,Last};
 
 
 
