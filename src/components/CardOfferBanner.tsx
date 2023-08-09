@@ -6,7 +6,7 @@ import card2 from "../assets/card2.png";
 
 const CardOfferBanner = () => {
   return (
-    <div className="bg-[#FFE6CC] my-24 flex w-full h-80 px-48 relative items-center">
+    <div className="bg-[#FFE6CC] my-20 flex w-full h-80 px-48 relative items-center">
         <div className="flex flex-col">
         <p className="font-extrabold text-6xl text-[#333333]">Get 5% Cash Back</p>
         <p className="text-[#333333] font-medium text-xl pl-3">on Shopcart.com</p>

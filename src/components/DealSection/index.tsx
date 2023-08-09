@@ -8,9 +8,9 @@ interface DealCardprops{
 
 const index = ({title="Get Up To 70% Off"}:DealCardprops) => {
   return (
-    <div className="flex flex-col">
-      <p className="font-bold text-3xl mb-8 mx-36">{title}</p>
-    <div className="my-16 px-32 flex justify-around">
+    <div className="flex flex-col items-center my-6">
+      <p className="font-bold text-3xl mb-6 w-[85%]">{title}</p>
+    <div className="flex w-[85%] gap-x-4">
       {deals.map((deal) => {
         return (
           <div key={deal.id}>

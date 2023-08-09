@@ -17,18 +17,18 @@ interface props {
 
 const ProductCardLarge = (props: props) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { x, y } = DragHandler(ref, 2);
+  const { x, y } = DragHandler(ref);
  
 
   return (
     <div ref={ref} className="flex bg-white flex-col flex-grow overflow-hidden">
-      <div className="w-full h-[70%] bg-[#F5F6F6] cursor-none flex-shrink-0 relative overflow-hidden rounded-xl group">
+      <div className="w-full h-[70%] bg-[#F5F6F6] flex-shrink-0 relative overflow-hidden rounded-xl group">
         <motion.div
           className={
             "w-[90px] items-center justify-center h-[90px] absolute z-50 group-hover:flex hidden flex-grow bg-transparent border-2 border-green-950 rounded-full"
           }
           // variants={variants}
-          animate={{ x: x - 40, y: y }}
+          animate={{ x: x - 40, y: y-45 }}
           transition={{
             type: "spring",
             damping: 5,

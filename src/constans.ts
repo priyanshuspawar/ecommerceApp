@@ -392,52 +392,6 @@ const services = [
   },
 ];
 
-const footer = {
-  "Department": [
-    "Fashion",
-    "Education Product",
-    "Frozen Food",
-    "Beverages",
-    "Organic Grocery",
-    "Office Supplies",
-    "Beauty Products",
-    "Books",
-    "Electronics & Gadget",
-    "Travel Accessories",
-    "Fitness",
-    "Sneakers",
-    "Toys",
-    "Furniture",
-  ],
-  "About Us":[
-    "About Shopcart",
-    "Careers",
-    "News & blog",
-    "Help",
-    "Press Center",
-    "Shop By Location",
-    "Shopcart Brands",
-    "Affiliate & Partners",
-    "Ideas & Guides",
-  ],
-  "Services":[
-    "Gift Card",
-    "Mobile App",
-    "Shipping & Delivery",
-    "Order Pickup",
-    "Account Signup",
-  ],
-  "Help":[
-    "Shopcart Help",
-    "Returns",
-    "Track Orders",
-    "Contact Us",
-    "Feedback",
-    "Security & Fraud"
-  ]
-};
-
-
 
 const footer = {
   

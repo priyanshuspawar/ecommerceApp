@@ -13,7 +13,7 @@ interface props{
 
 const DealCard = (props:props) => {
   return (
-    <div className="w-96 h-[475px] flex flex-col group rounded-xl overflow-hidden">
+    <div className="flex flex-col group rounded-xl overflow-hidden">
 
         <div className="h-[50%] p-10" style={{backgroundColor:props.bgColor}}>
             <p className="font-bold text-[#333333] mb-2 text-2xl">Save</p>

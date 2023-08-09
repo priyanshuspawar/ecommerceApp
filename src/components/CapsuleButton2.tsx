@@ -5,7 +5,7 @@ interface props {
 
 const CapsuleButton2 = ({
   title,
-  style = " w-40 h-16 hover:bg-[#003D29] bg-black items-center justify-center font-bold text-xl text-white flex rounded-full",
+  style = " w-36 h-14 hover:bg-[#003D29] bg-black items-center justify-center font-bold text-lg text-white flex rounded-full",
 }: props) => {
   return (
     <div className={style}>

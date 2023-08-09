@@ -20,16 +20,17 @@ const index = ({title}:props) => {
     if (swiper.progress > 0.05) {
       progressBar.style.width = `${swiper.progress * 100}%`;
     } else {
-      progressBar.style.width = `${0.05 * 100}%`;
+      progressBar.style.width = `${0.20 * 100}%`;
     }
   };
 
 
   return (
-    <div className="relative ">
+    <div className="relative my-6">
 
-      <p className="font-bold text-3xl mb-8 mx-36">{title}</p>
-
+      <div className="w-full flex justify-center">
+      <p className="font-bold text-3xl mb-6 w-[85%] self-center">{title}</p>
+      </div>
 
 
       <div className="w-full flex flex-col relative gap-y-14 my-8">
@@ -58,7 +59,7 @@ const index = ({title}:props) => {
        <div className="w-full flex justify-center items-center">
         <div className=" w-[85%] h-1 bg-[#D3D2D2]">
           <div
-            className="progress-bar h-1 bg-black w-[10%] transition transform-gpu duration-100"
+            className="progress-bar h-1 bg-black w-[20%] transition transform-gpu duration-100"
             
             style={{ transition: "width 0.1s ease-in-out" }}
           ></div>

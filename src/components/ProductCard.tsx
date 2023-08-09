@@ -13,29 +13,12 @@ interface props {
 }
 
 const ProductCard = (props: props) => {
-  const [mousePosition, setmousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-
-
-  const variants = {
-    default: {
-      x: mousePosition.x - 90,
-      y: mousePosition.y - window.innerHeight * 0.5,
-    },
-    transition: {
-      type: "spring",
-      duration: 0.8,
-      mass: 0.4,
-    },
-  };
 
   return (
-    <div className="flex relative flex-col w-max max-w-lg m-4">
+    <div className="flex relative flex-col">
       <div
-        className="flex overflow-hidden h-80 group 
-     bg-[#F5F6F6] rounded-lg w-max mb-4"
+        className="flex overflow-hidden group 
+     bg-[#F5F6F6] rounded-lg mb-4"
       >
         {/* product image */}
         <div className="flex flex-grow  m-6 justify-center hover:scale-125 transition transform-gpu duration-150 delay-75 ease-in items-center">
@@ -68,14 +51,7 @@ const ProductCard = (props: props) => {
           </div>
         </div>
 
-        {/* custom cursor */}
-        {/* <motion.div
-          className="h-[90px] w-[90px] hidden group-hover:flex absolute z-30 rounded-full border-[#003D29] border-4 items-center justify-center"
-          variants={variants}
-          animate={"default"}
-        >
-          <p className="text-[#003D29] font-bold text-xl">Drag</p>
-        </motion.div> */}
+       
       </div>
 
       {/* product details */}
