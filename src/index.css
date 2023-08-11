@@ -21,9 +21,20 @@ html {
     @apply font-medium text-xl cursor-pointer hover:opacity-70 transition-opacity transform-gpu duration-75  ease-in
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #003D29; /* Change this to your desired active color */
+}
 
 
 
+
+.myborder{
+  @apply border-2 border-pink-700
+}
+
+.sectionTitle{
+  @apply font-bold text-2xl mb-6 w-[90%]
+}
 
   /* width */
 ::-webkit-scrollbar {

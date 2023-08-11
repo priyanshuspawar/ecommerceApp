@@ -11,34 +11,45 @@ import CapsuleButton from "../CapsuleButton"
 
 
 const index = () => {
+  const height = window.innerHeight*0.55;
   return (
     <AnimatePresence>
-      <motion.div className="flex items-center relative">
-        
+        <motion.div className={"flex flex-col relative"}
+        style={{height:height}}
+        >
+          <div className="flex w-screen h-full">
+            <img src={herobg} width={"100%"} height={"100%"}
+            />
+          </div>
 
-        {/* right section */}
-        <img src={herobg} height={"100%"} width={"100%"} className=""/>
-        <motion.img src={ladder} className="absolute" height={"100%"} width={"100%"} {...slideAnimation("right")}/>
+           {/* right section */}
+        {/* <div className="hidden">
+        <motion.img src={ladder} className="absolute hidden" height={"100%"} width={"100%"} {...slideAnimation("right")}/>
         <img src={TopMost} className="absolute z-10 right-[10%] top-[18%]"/>
         <img src={middle} className="absolute z-10 right-[29%] mb-20"/>
         <img src={bottomLeft} className="absolute z-10 right-[38%] bottom-32"/>
         <img src={bottomRight} className="absolute z-10 right-[12%] bottom-[25%]"/>
+        </div> */}
+
 
 
         {/* left section */}
-        <motion.div className="absolute flex flex-col gap-16 pb-12 left-20">
-          <motion.p className="text-7xl font-bold w-9/12 text-[#003D29] leading-[75px]">
+        <motion.div className="absolute flex flex-col gap-8 top-0 h-full justify-center pl-4">
+          <motion.p className="text-3xl leading-10 font-bold text-[#003D29]">
             {heroScreenText.title}
           </motion.p>
           
-          <motion.p className="text-2xl font-normal text-[#003D29] w-6/12">
+          <motion.p className="text-sm font-normal text-[#003D29] whitespace-pre-wrap">
             {heroScreenText.description}
           </motion.p>
           {/* learn more */}
-          <CapsuleButton />
-
+          <div className="">
+          <CapsuleButton height="50px" width="38%" />
+          </div>
         </motion.div>
-      </motion.div>
+     
+          
+        </motion.div>
     </AnimatePresence>
   )
 }

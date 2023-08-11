@@ -32,10 +32,6 @@ import QnA from "./assets/QnA.png";
 import onlinePayment from "./assets/onlinePayment.png";
 import homeDelivery from "./assets/HomeDelivery.png";
 
-
-
-
-
 import Stripe from "./assets/stripe.png";
 import Visa from "./assets/Visa.png";
 import MCard from "./assets/masterCard.png";
@@ -48,10 +44,6 @@ import becomeSeller from "./assets/becomeSeller.png";
 import GiftCard from "./assets/giftCard.png";
 import HelpCenter from "./assets/helpCenter.png";
 
-
-
-
-
 import bp1 from "./assets/bestProducts/bp1.png";
 import bp2 from "./assets/bestProducts/bp2.png";
 import bp3 from "./assets/bestProducts/bp3.png";
@@ -60,6 +52,28 @@ import bp5 from "./assets/bestProducts/bp5.png";
 import bp6 from "./assets/bestProducts/bp6.png";
 import bp7 from "./assets/bestProducts/bp7.png";
 import bp8 from "./assets/bestProducts/bp8.png";
+
+import airPodsPink from "../src/assets/products/airpods-max-pink.png";
+import airPodsgreen from "../src/assets/products/airpods-max-green.png";
+import airPodsSpaceGray from "../src/assets/products/airpods-max-spacegray.png";
+import airPodsSilver from "../src/assets/products/airpods-max-silver.png";
+import airPodsSkyBlue from "../src/assets/products/airpods-max-skyblue.png";
+
+const productsDetails = [
+  {
+    id: 0,
+    title: "AirPods Max",
+    description:"AirPods Max reimagine over-ear headphones. An Apple designed dynamic driver provides immersive high fidelity audio. Every detail, from canopy to cushions, has been designed for an exceptional fit. Industry leading Active Noise Cancellation blocks outside noise, while Transparency mode lets it in. And spatial audio with dynamic head tracking provides theatre like sound that surrounds you.",
+    price:"$549 or $99/ month",
+    variants: [
+      { id: 0, subTitle: "Pink", color: ["#E4544D", "#D8A097"],image:airPodsPink },
+      { id: 1, subTitle: "Green", color: ["#E7ECE3", "#AFBFAB"] ,image:airPodsgreen},
+      { id: 1, subTitle: "Sky Blue", color: ["#2F506C", "#91A6BB"],image:airPodsSkyBlue },
+      { id: 1, subTitle: "Silver", color: ["#F5F4F0", "#D2D3D4"],image:airPodsSilver },
+      { id: 1, subTitle: "Space Gray", color: ["#3C3D3A", "#595759"],image:airPodsSpaceGray },
+    ],
+  },
+];
 
 const navBarOptions = [
   { id: 0, title: "Deals" },
@@ -77,16 +91,15 @@ const categories = [
 ];
 
 const genre = [
-  { id: 0, title: "Gadgets"},
-  { id: 1, title: "Fashion"},
-  { id: 2, title: "Toys"},
-  { id: 3, title: "Education"},
-  { id: 4, title: "Beauty"},
-  { id: 5, title: "Fitness"},
-  { id: 6, title: "Furniture"},
-  { id: 7, title: "Sneakers"},
-]
-
+  { id: 0, title: "Gadgets" },
+  { id: 1, title: "Fashion" },
+  { id: 2, title: "Toys" },
+  { id: 3, title: "Education" },
+  { id: 4, title: "Beauty" },
+  { id: 5, title: "Fitness" },
+  { id: 6, title: "Furniture" },
+  { id: 7, title: "Sneakers" },
+];
 
 const heroScreenText = {
   title: "Shopping And Department Store.",
@@ -375,7 +388,6 @@ const services = [
     title: "Frequently Asked ",
     title2: "Questions",
     description: "Updates on safe Shopping in our Stores",
-    description2: "our Stores",
     Img: QnA,
   },
   {
@@ -383,7 +395,6 @@ const services = [
     title: "Online Payment",
     title2: "Process",
     description: "Updates on safe Shopping in our Stores",
-    description2: "our Stores",
     Img: onlinePayment,
   },
   {
@@ -391,20 +402,15 @@ const services = [
     title: "Home Delivery",
     title2: "Options",
     description: "Updates on safe Shopping in our Stores",
-    description2: "our Stores",
     Img: homeDelivery,
   },
 ];
 
-
 const footer = {
-  
-  "ShopCart":[
-    "Amet minim mollit non deserunt ullamco est sit aliqua",
-    "dolor do amet sint. Velit officia consequat duis enim velit",
-    "mollit."
-  ],
-  "Department": [
+  ShopCartDescription: 
+    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+  ,
+    Department: [
     "Fashion",
     "Education Product",
     "Frozen Food",
@@ -420,7 +426,7 @@ const footer = {
     "Toys",
     "Furniture",
   ],
-  "About Us":[
+  "About Us": [
     "About Shopcart",
     "Careers",
     "News & blog",
@@ -431,68 +437,79 @@ const footer = {
     "Affiliate & Partners",
     "Ideas & Guides",
   ],
-  "Services":[
+  Services: [
     "Gift Card",
     "Mobile App",
     "Shipping & Delivery",
     "Order Pickup",
     "Account Signup",
   ],
-  "Help":[
+  Help: [
     "Shopcart Help",
     "Returns",
     "Track Orders",
     "Contact Us",
     "Feedback",
-    "Security & Fraud"
-  ]
+    "Security & Fraud",
+  ],
 };
-const Payment=[
-     {
-      Img:Stripe
-     },
-     {
-      Img:Visa
-     },
-     {
-      Img:MCard
-     },
-     {
-      Img:Amazon
-     },
-     {
-      Img:klarna
-     },
-     {
-      Img:paypal
-     },
-     {
-      Img:applepay
-     },
-     {
-      Img:Gpay
-     },
+const Payment = [
+  {
+    Img: Stripe,
+  },
+  {
+    Img: Visa,
+  },
+  {
+    Img: MCard,
+  },
+  {
+    Img: Amazon,
+  },
+  {
+    Img: klarna,
+  },
+  {
+    Img: paypal,
+  },
+  {
+    Img: applepay,
+  },
+  {
+    Img: Gpay,
+  },
 ];
- const Last=[
+const Last = [
   {
-    id:0,
-    Img:becomeSeller,
-    title:"Become Seller"
+    id: 0,
+    Img: becomeSeller,
+    title: "Become Seller",
   },
   {
-    id:2,
-    Img:GiftCard,
-    title:"Gift Cards"
+    id: 2,
+    Img: GiftCard,
+    title: "Gift Cards",
   },
   {
-    id:2,
-    Img:HelpCenter,
-    title:"Help Center"
+    id: 2,
+    Img: HelpCenter,
+    title: "Help Center",
   },
- ]
+];
 
-
-export { navBarOptions, heroScreenText, categories, products,Brands,deals,bestSell ,services, bestSellingProducts,footer,Payment,genre,Last};
-
-
-
+export {
+  navBarOptions,
+  heroScreenText,
+  categories,
+  products,
+  Brands,
+  deals,
+  bestSell,
+  services,
+  bestSellingProducts,
+  footer,
+  Payment,
+  genre,
+  Last,
+  productsDetails
+};

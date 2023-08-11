@@ -22,10 +22,10 @@ const ProductCardLarge = (props: props) => {
 
   return (
     <div ref={ref} className="flex bg-white flex-col flex-grow overflow-hidden">
-      <div className="w-full h-[70%] bg-[#F5F6F6] flex-shrink-0 relative overflow-hidden rounded-xl group">
+      <div className="w-full h-[50%] bg-[#F5F6F6] flex-shrink-0 relative overflow-hidden rounded-xl group">
         <motion.div
           className={
-            "w-[90px] items-center justify-center h-[90px] absolute z-50 group-hover:flex hidden flex-grow bg-transparent border-2 border-green-950 rounded-full"
+            "w-[90px] items-center justify-center h-[90px] absolute z-50  hidden flex-grow bg-transparent border-2 border-green-950 rounded-full"
           }
           // variants={variants}
           animate={{ x: x - 40, y: y-45 }}
@@ -46,12 +46,13 @@ const ProductCardLarge = (props: props) => {
           height={"80%"}
         />
 
-     <div className="flex p-6 absolute right-8 top-0">
+    {/* like button */}
+     <div className="flex p-4 absolute right-2 top-2 h-fit justify-center items-center">
            <div className="absolute z-50 flex-grow w-full h-full bg-transparent peer" />
            <div className="flex items-center justify-center peer-hover:bg-[#F9DCDC]  bg-white rounded-full absolute h-full w-full">
              <svg
                xmlns="http://www.w3.org/2000/svg"
-               className="h-6 w-6 z-10"
+               className="h-4 w-4 z-10"
                fill="#FFFFFF"
                viewBox="0 0 24 24"
                stroke="#4F4F4F"
@@ -64,21 +65,22 @@ const ProductCardLarge = (props: props) => {
                />
              </svg>
            </div>
-         </div>
+       </div>
+      
+      
       </div>
 
       <div>
         {/* product details */}
         <div className="px-1 mb-3 pointer-events-none pt-3">
           <div className="flex justify-between">
-            <p className="font-semibold text-lg">{props?.ProductTitle}</p>
+            <p className="font-semibold text-sm line-clamp-1">{props?.ProductTitle}</p>
             <div className="flex">
               <p className="font-bold text-sm">$</p>
-              <p className="font-bold text-lg">{`${props?.Price}`}</p>
-              <p className="font-bold text-sm">.00</p>
+              <p className="font-bold text-sm">{`${props?.Price}`}</p>
             </div>
           </div>
-          <p className="font-light text-xs mb-1">{props?.Description}</p>
+          <p className="font-light text-[9px] mb-1 line-clamp-1">{props?.Description}</p>
           <RatingStars rating={props?.Rating} ratedUsers={props?.RatedUsers} />
         </div>
         <AddToCartButton />

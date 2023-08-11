@@ -11,41 +11,44 @@ import CardOfferBanner from "../../components/CardOfferBanner";
 import BestSelling from "../../components/BestSelling";
 import TrendingProductSection from "../../components/TrendingProductSection";
 import Services from "../../components/Services";
+import DropDown from "../../components/DropDown";
+import {useState} from "react"
 import Footer from "../../components/Footer";
 
 
 
 
-
-
-
 const index = () => {
-
+  const [visible,setVisible] = useState(false);
 
   return (
     <div className="flex flex-col w-screen overflow-hidden relative">
 
       
       <HeadBar/>
-        <NavBar/>
-
+        <NavBar onClick={()=>{setVisible(!visible)}}/>
+        {/* menu bar */}  
+        
+          {visible?<DropDown visible={visible}/>:<></>}
+   
         <HeroSection/>
+
         <CategorySecion/>
-        <ProductSlider title="Weekly Popular Products"/>
+        <ProductSlider title={"Todays Best Deals For You!"}/>
         <ChooseBrand/>
         <DealSecion/>
-        <ProductSlider title={"Todays Best Deals For You!"}/>
+        <ProductSlider title="Weekly Popular Products"/>
         <DiscountBanner/>
-        {/* small card section */}
         <BestDealSection/>
         <CardOfferBanner/>
         <ProductSlider title="Most Selling Products"/>
         <TrendingProductSection/>
         <BestSelling/>
+
+        
         <Services/>
          <Footer/>
     </div>
-
   )
 }
 

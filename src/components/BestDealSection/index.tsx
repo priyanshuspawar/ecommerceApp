@@ -35,8 +35,9 @@ const index = () => {
   }
   return (
     <div className="flex flex-col my-10 items-center">
-      <p className="font-bold text-4xl mb-10 w-[85%]">Todays Best Deals For You!</p>
-      <div className="flex gap-x-3 mb-8 w-[85%]">
+      <p className="sectionTitle w-[90%]">Todays Best Deals For You!</p>
+      <div className="flex flex-wrap
+       gap-x-3 gap-y-2 mb-8 w-[90%]">
         {genre.map((genre,index) =>
         <div key={genre.id}>
           <GenreButton title={genre.title}
@@ -47,7 +48,7 @@ const index = () => {
           />
         </div>)}
       </div>
-      <div className="grid grid-cols-4 w-[85%] gap-x-4 gap-y-8">
+      <div className="grid grid-cols-2 w-[85%] gap-x-4 gap-y-8">
         {bestSellingProducts.map((product) => {
           return (
             <div key={product.id}>

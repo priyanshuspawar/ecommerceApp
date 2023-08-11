@@ -3,16 +3,15 @@ import { services } from "../constans";
 const Services = () => {
   return (
     <div className="flex flex-col items-center my-8">
-      <p className="font-bold text-3xl mb-8 w-[85%]">Services To Help You Shop </p>
-      <div className="flex flex-row w-[85%] gap-6">
+      <p className="sectionTitle w-[90%]">Services To Help You Shop </p>
+      <div className="grid grid-cols-1 w-[90%] gap-6">
         {services.map((e) => {
           return (
             <div className="bg-[#F5F6F6] rounded-xl flex flex-col  group flex-grow overflow-hidden" key={e.id}>
-              <div className="h-[45%] p-14">
+              <div className="h-[45%] p-6">
                 <p className="font-bold text-2xl">{e.title}</p>
                 <p className="font-bold text-2xl mb-3">{e.title2}</p>
                 <p className="font-semibold text-[#4D4D4D]">{e.description}</p>
-                <p className="font-semibold text-[#4D4D4D]">{e.description2}</p>
               </div>
               <div className=" flex overflow-hidden h-[55%]">
                 <img

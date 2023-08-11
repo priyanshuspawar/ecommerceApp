@@ -15,9 +15,12 @@ const DiscountBanner = () => {
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1.2, 1]);
+  const height = window.innerHeight*0.435;
 
   return (
-    <div className="flex items-center overflow-hidden w-screen h-3/4 relative my-6">
+    <div className="flex items-center overflow-hidden w-screen relative flex-col justify-center"
+      style={{height:height}}
+    >
       <motion.div
         style={{ scale }}
         ref={ref}
@@ -32,12 +35,12 @@ const DiscountBanner = () => {
       </motion.div>
 
       {/* discount tile */}
-      <div className="flex flex-col bg-[#003D29] absolute z-10 right-48 justify-evenly px-16 w-[30%] h-[50%]
+      <div className="flex flex-col pl-6 bg-[#003D29] absolute z-10 justify-evenly w-[85%] h-[80%]
       ">
         <div>
-        <p className="font-extrabold text-[45px] leading-tight text-white mb-4 whitespace-break-spaces">Get 5% Cash Back On $200
+        <p className="font-semibold text-2xl text-white mb-4">Get 5% Cash Back On $200
         </p>
-        <p className="font-medium text-xl text-white mb-2">
+        <p className="text-sm text-white mb-2 pr-6">
           Shopping is a bit of a relaxing hobby for me, which is sometimes
           troubling for the bank balance.
         </p>

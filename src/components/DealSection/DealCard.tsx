@@ -15,7 +15,7 @@ const DealCard = (props:props) => {
   return (
     <div className="flex flex-col group rounded-xl overflow-hidden">
 
-        <div className="h-[50%] p-10" style={{backgroundColor:props.bgColor}}>
+        <div className="h-[50%] p-6" style={{backgroundColor:props.bgColor}}>
             <p className="font-bold text-[#333333] mb-2 text-2xl">Save</p>
                 <div className="flex gap-1 mb-4" style={{color:props.textColor}}>
                     <p className="font-bold text-4xl">$</p>

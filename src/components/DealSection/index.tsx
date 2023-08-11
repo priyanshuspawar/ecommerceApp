@@ -9,8 +9,8 @@ interface DealCardprops{
 const index = ({title="Get Up To 70% Off"}:DealCardprops) => {
   return (
     <div className="flex flex-col items-center my-6">
-      <p className="font-bold text-3xl mb-6 w-[85%]">{title}</p>
-    <div className="flex w-[85%] gap-x-4">
+      <p className="sectionTitle">{title}</p>
+    <div className="grid grid-cols-1 w-[90%] gap-x-4 gap-y-4">
       {deals.map((deal) => {
         return (
           <div key={deal.id}>

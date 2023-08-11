@@ -26,10 +26,10 @@ export function DragHandler(ref: RefObject<HTMLElement>) {
 
   
     // window.addEventListener("pointermove", handlePointerMove);
-    ref.current?.addEventListener("mousemove", handlePointerMove);
+    ref.current?.addEventListener("pointermove", handlePointerMove);
     
 
-    return () => {ref.current?.removeEventListener("mousemove", handlePointerMove)
+    return () => {ref.current?.removeEventListener("pointermove", handlePointerMove)
     
     setPoint({x:0,y:0})
   };

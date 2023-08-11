@@ -1,11 +1,15 @@
 interface props{
   borderEnable?:Boolean;
-  
+  width?:string;
+  height?:string;
 }
-const CapsuleButton = ({borderEnable=false}:props) => {
+const CapsuleButton = ({borderEnable=false,width="45%",height}:props) => {
   return (
     <div>
-        <p className={"flex hover:bg-black   justify-center rounded-full  bg-[#003D29]  py-4 px-5  text-white  font-bold items-center w-44 text-lg "+`${borderEnable?"border-2 border-white hover:border-transparent":""}`}>Learn More</p>
+        <p className={"flex hover:bg-black py-2   justify-center rounded-full  bg-[#003D29]   text-white  font-semibold items-center text-base "+`${borderEnable?"border-[1px] border-white hover:border-transparent":""}`}
+        
+          style={{width:width,height:height}}
+        >Learn More</p>
     </div>
   )
 }
