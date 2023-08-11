@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion"
 import herobg from "../../assets/herobg.png"
-import ladder from "../../assets/ladders.png"
-import bottomLeft from "../../assets/bottomLeft.png";
-import bottomRight from "../../assets/bottomRight.png";
-import middle from "../../assets/middle.png";
-import TopMost from "../../assets/TopMost.png";
-import { slideAnimation } from "../../config/motion"
+// import ladder from "../../assets/ladders.png"
+// import bottomLeft from "../../assets/bottomLeft.png";
+// import bottomRight from "../../assets/bottomRight.png";
+// import middle from "../../assets/middle.png";
+// import TopMost from "../../assets/TopMost.png";
+// import { slideAnimation } from "../../config/motion"
 import { heroScreenText } from "../../constans"
 import CapsuleButton from "../CapsuleButton"
 

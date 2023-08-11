@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+
 import RatingStars from "./RatingStars";
-import { motion } from "framer-motion";
+
 import AddToCartButton from "./AddToCartButton";
 interface props {
   ProductTitle: string;

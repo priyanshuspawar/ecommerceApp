@@ -8,9 +8,9 @@ import { productsDetails } from '../constans';
 interface props{
     setRef:()=>void
 }
-import {useRef, useState} from "react"
+import { useState} from "react"
 
-const ImageSlider = ({setRef}:props) => {
+const ImageSlider = ({}:props) => {
     // const ref = useRef(null)
     const [ref2,setref2] = useState<any>();
     // console.log("@@",ref.current)
