@@ -14,7 +14,6 @@ const index = () => {
           <HomeScreen/>
         </Suspense>
       } />
-      <Route path="/hello" element={<ProductScreen/>}/>
     </Routes>
   );
 };
