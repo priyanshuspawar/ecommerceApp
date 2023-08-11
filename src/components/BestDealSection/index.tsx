@@ -1,12 +1,11 @@
 import { bestSellingProducts,genre } from "../../constans";
-import CapsuleButton2 from "../CapsuleButton2";
 import ProductCard from "../ProductCard";
 import GenreButton from "../GenreButton";
 import { useState } from "react";
 
 const index = () => {
 
-   const initialArr=genre.map((e,i)=>{
+   const initialArr=genre.map((_e,i)=>{
     if(i===0){
       return(
         {id:i,active:true}
@@ -18,7 +17,7 @@ const index = () => {
    })  
   const [isClicked, setIsClicked] = useState(initialArr);
   const onClick=(index:number)=>{
-    const newArr=isClicked.map((e,i)=>{
+    const newArr=isClicked.map((_e,i)=>{
 
       if(i===index){
         return(

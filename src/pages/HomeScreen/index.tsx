@@ -29,7 +29,7 @@ const index = () => {
         <NavBar onClick={()=>{setVisible(!visible)}}/>
         {/* menu bar */}  
         
-          {visible?<DropDown visible={visible}/>:<></>}
+          {visible?<DropDown/>:<></>}
    
         <HeroSection/>
 
