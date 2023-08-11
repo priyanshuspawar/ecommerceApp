@@ -12,7 +12,7 @@ import {useRef, useState} from "react"
 
 const ImageSlider = ({setRef}:props) => {
     // const ref = useRef(null)
-    const [ref2,setref2] = useState<typeof Swiper>();
+    const [ref2,setref2] = useState<any>();
     // console.log("@@",ref.current)
     console.log("@@",ref2)
   return (
