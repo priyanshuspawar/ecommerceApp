@@ -1,7 +1,6 @@
 import { lazy , Suspense} from "react";
 import { Routes, Route } from "react-router-dom";
 import SkeletonHome from "../skeletons/SkeletonHome";
-import ProductScreen from "../pages/ProductScreen";
 
 
 const HomeScreen = lazy(()=> import ("../pages/HomeScreen"));

@@ -17,9 +17,9 @@ const Footer = () => {
         {/* department */}
         <div>
           <p className="font-bold text-xl mb-6"> Department</p>
-          {footer.Department.map((e) => {
+          {footer.Department.map((e,index) => {
             return (
-              <p className="flex my-2 text-sm  hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
+              <p key={index} className="flex my-2 text-sm  hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
                 {e}
               </p>
             );
@@ -28,9 +28,9 @@ const Footer = () => {
         {/* about us */}
         <div>
           <p className="font-bold text-xl mb-6"> About Us</p>
-          {footer["About Us"].map((e) => {
+          {footer["About Us"].map((e,index) => {
             return (
-              <p className="flex my-2 text-sm  hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
+              <p key={index} className="flex my-2 text-sm  hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
                 {e}
               </p>
             );
@@ -39,9 +39,9 @@ const Footer = () => {
         {/* services */}
         <div>
           <p className="font-bold text-xl mb-6"> Services</p>
-          {footer.Services.map((e) => {
+          {footer.Services.map((e,index) => {
             return (
-              <p className="flex my-2 text-sm hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
+              <p key={index} className="flex my-2 text-sm hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
                 {e}
               </p>
             );
@@ -50,9 +50,9 @@ const Footer = () => {
         {/* help */}
         <div>
           <p className="font-bold text-xl mb-6"> Help</p>
-          {footer.Help.map((e) => {
+          {footer.Help.map((e,index) => {
             return (
-              <p className="flex my-2 text-sm hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
+              <p key={index} className="flex my-2 text-sm hover:text-[#ff5c4c]  hover:translate-x-4 transition transform-gpu duratin-300 ease-in">
                 {e}
               </p>
             );
@@ -63,9 +63,9 @@ const Footer = () => {
         <div className="col-span-2 flex flex-col">
         <p className="font-bold text-xl mb-6 mt-10 "> Accepted Payments</p>
             <div className="grid grid-cols-3 gap-4">
-              {Payment.map((e) => {
+              {Payment.map((e,index) => {
                 return (
-                  <div className="border border-[#d1d4d4]  rounded-md  flex py-3 items-center justify-center">
+                  <div key={index} className="border border-[#d1d4d4]  rounded-md  flex py-3 items-center justify-center">
                     <img src={e.Img}/>
                   </div>
                 );
@@ -79,9 +79,9 @@ const Footer = () => {
       {/* credits n all */}
       <div className="flex flex-col my-4 w-[90%] justify-between items-center ">
         <div className="grid grid-cols-2 w-full gap-y-3 mb-6">
-          {Last.map((e) => {
+          {Last.map((e,index) => {
             return (
-              <div className=" hover:text-[#ff5c4c] flex text-sm gap-2 items-center cursor-pointer flex-grow">
+              <div key={index} className=" hover:text-[#ff5c4c] flex text-sm gap-2 items-center cursor-pointer flex-grow">
                 <img src={e.Img}  className="" />
                 <p>{e.title}</p>
               </div>
