@@ -11,11 +11,11 @@ const NavOptions = () => {
         </div>
         <hr className="lineMove"></hr>
       </div>
-      <div className="flex flex-row items-center gap-6">
+      <div className="flex flex-row items-center gap-6 lg:hidden xl:flex w-max">
       {navBarOptions.map((element) => {
         return (
           <div key={element.id} className="flex flex-grow flex-nowrap">
-            <p className="options">{element.title}</p>
+            <p className="options flex-shrink-0">{element.title}</p>
           </div>
         );
       })}

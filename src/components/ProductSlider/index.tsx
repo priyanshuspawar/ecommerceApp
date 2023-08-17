@@ -14,7 +14,7 @@ interface props{
 }
 
 const index = ({title}:props) => {
-  
+  const isNonMobileScreen = window.innerWidth>=1024;
   const handleChange = (swiper: any) => {
     const progressBar = document.querySelector(".progress-bar") as HTMLElement;
     if (swiper.progress > 0.05) {
@@ -29,19 +29,19 @@ const index = ({title}:props) => {
     <div className="relative my-6">
 
       <div className="w-full flex justify-center">
-      <p className="font-bold text-2xl mb-4 w-[90%] self-center">{title}</p>
+      <p className="font-bold text-xl mb-4 w-[95%] lg:w-full self-center">{title}</p>
       </div>
 
 
       <div className="w-full flex flex-col relative gap-y-1">
         <Swiper
-          className="w-[90%] mb-4"
-          slidesPerView={2}
+          className="w-[95%] lg:w-full"
+          slidesPerView={isNonMobileScreen?3:2}
           spaceBetween={13}
           onTransitionEnd={handleChange}
         >
           {products.map((product, index) => (
-            <SwiperSlide className="flex w-[31%]" key={index}>
+          <SwiperSlide className="flex w-[31%]" key={index}>
               <ProductCardLarge
                 key={index}
                 ProductTitle={product.ProductTitle}
@@ -57,7 +57,7 @@ const index = ({title}:props) => {
         </Swiper>
         
        <div className="w-full flex justify-center items-center">
-        <div className=" w-[85%] h-1 bg-[#D3D2D2]">
+        <div className=" w-[95%] h-1 bg-[#D3D2D2]">
           <div
             className="progress-bar h-1 bg-black w-[20%] transition transform-gpu duration-100"
             

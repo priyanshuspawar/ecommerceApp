@@ -1,7 +1,7 @@
 import { lazy , Suspense} from "react";
 import { Routes, Route } from "react-router-dom";
 import SkeletonHome from "../skeletons/SkeletonHome";
-
+import Productscreen from "../pages/ProductScreen"
 
 const HomeScreen = lazy(()=> import ("../pages/HomeScreen"));
 
@@ -13,6 +13,7 @@ const index = () => {
           <HomeScreen/>
         </Suspense>
       } />
+      <Route path="/hello" element={<Productscreen/>}/>
     </Routes>
   );
 };

@@ -5,3 +5,5 @@ declare function useScroll({ container, target, layoutEffect, ...options }?: Use
     scrollYProgress: MotionValue<number>;
     offset?:string[];
 };
+
+export {useScroll};

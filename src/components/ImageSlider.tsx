@@ -6,32 +6,31 @@ import "../index.css";
 import { productsDetails } from '../constans';
 
 interface props{
-    setRef:()=>void
+    setRef:(e:any)=>void
 }
-import { useState} from "react"
 
-const ImageSlider = ({}:props) => {
+
+const ImageSlider = ({setRef}:props) => {
     // const ref = useRef(null)
-    const [ref2,setref2] = useState<any>();
-    // console.log("@@",ref.current)
-    console.log("@@",ref2)
+   
+
   return (
-    <div>
+    <div className='lg:w-[94%] lg:mb-4'>
       <Swiper
         // ref={ref}
-        onSwiper={setref2}
+        onSwiper={setRef}
         pagination={{
           dynamicBullets: true,
         //   bulletActiveClass:"text-red-500"
         }}
-        className='w-screen'
+        className='flex flex-grow'
         modules={[Pagination]}
       >
         {productsDetails[0].variants.map((variant,index )=>{
             return(
-                <SwiperSlide className='' key={index}>
-                <div className='flex w-full h-full justify-center bg-[#F6F6F6]'>
-                    <img src={variant.image} width={"90%"} height={"90%"}/>
+                <SwiperSlide className='flex flex-grow' key={index}>
+                <div className='flex justify-center flex-grow bg-[#F6F6F6] p-6'>
+                    <img src={variant.image} width={"100%"} height={"100%"} className=''/>
                 </div>
                 </SwiperSlide>
             )

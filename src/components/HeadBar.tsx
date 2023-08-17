@@ -4,11 +4,11 @@ import {ReactComponent as Arrow} from "../assets/downarrow.svg";
 const HeadBar = () => {
   return (
     <div className="bg-[#003D29] z-30 flex w-full py-2 justify-around">
-        <div className=" gap-1 items-center justify-center hidden">
+        <div className=" gap-1 items-center justify-center hidden lg:flex">
           <Phone fill="white"/>
           <p className="text-white text-sm ">+0012345678900</p>
         </div>
-        <p className="text-white text-sm hidden">Get 50% off on Selected items | Shop Now</p>
+        <p className="text-white text-sm hidden lg:flex">Get 50% off on Selected items | Shop Now</p>
         <div className="flex items-center justify-center gap-x-2">
         <p className="text-white text-sm">Eng</p>
         <Arrow fill="white"/>

@@ -59,19 +59,65 @@ import airPodsSpaceGray from "../src/assets/products/airpods-max-spacegray.png";
 import airPodsSilver from "../src/assets/products/airpods-max-silver.png";
 import airPodsSkyBlue from "../src/assets/products/airpods-max-skyblue.png";
 
-const productsDetails = [
+const productsDetails= [
   {
     id: 0,
     title: "AirPods Max",
-    description:"AirPods Max reimagine over-ear headphones. An Apple designed dynamic driver provides immersive high fidelity audio. Every detail, from canopy to cushions, has been designed for an exceptional fit. Industry leading Active Noise Cancellation blocks outside noise, while Transparency mode lets it in. And spatial audio with dynamic head tracking provides theatre like sound that surrounds you.",
-    price:"$549 or $99/ month",
+    description:
+      "AirPods Max reimagine over-ear headphones. An Apple designed dynamic driver provides immersive high fidelity audio. Every detail, from canopy to cushions, has been designed for an exceptional fit. Industry leading Active Noise Cancellation blocks outside noise, while Transparency mode lets it in. And spatial audio with dynamic head tracking provides theatre like sound that surrounds you.",
+    price: "$549 or $99/ month",
     variants: [
-      { id: 0, subTitle: "Pink", color: ["#E4544D", "#D8A097"],image:airPodsPink },
-      { id: 1, subTitle: "Green", color: ["#E7ECE3", "#AFBFAB"] ,image:airPodsgreen},
-      { id: 1, subTitle: "Sky Blue", color: ["#2F506C", "#91A6BB"],image:airPodsSkyBlue },
-      { id: 1, subTitle: "Silver", color: ["#F5F4F0", "#D2D3D4"],image:airPodsSilver },
-      { id: 1, subTitle: "Space Gray", color: ["#3C3D3A", "#595759"],image:airPodsSpaceGray },
+      {
+        id: 0,
+        subTitle: "Pink",
+        color: ["#E4544D", "#D8A097"],
+        image: airPodsPink,
+      },
+      {
+        id: 1,
+        subTitle: "Green",
+        color: ["#E7ECE3", "#AFBFAB"],
+        image: airPodsgreen,
+      },
+      {
+        id: 1,
+        subTitle: "Sky Blue",
+        color: ["#2F506C", "#91A6BB"],
+        image: airPodsSkyBlue,
+      },
+      {
+        id: 1,
+        subTitle: "Silver",
+        color: ["#F5F4F0", "#D2D3D4"],
+        image: airPodsSilver,
+      },
+      {
+        id: 1,
+        subTitle: "Space Gray",
+        color: ["#3C3D3A", "#595759"],
+        image: airPodsSpaceGray,
+      },
     ],
+    Specifications: {
+      General: {
+        "Brand": "Apple",
+        "Model": "AirPods Max Wireless Headpohones",
+        "Price": "$549",
+        "Release Date": "December 2020",
+        "Model Number": "AirPods Max",
+        "Headphone Type": "Over-Ear",
+        "Connectivity": "Wireless",
+      },
+      ProductDetails: {
+        "Microphone": "Yes",
+        "Driver Type": "Dynamic",
+        "Driver Size(mm)": 40,
+        "Number of Drivers": 1,
+        "Water Resistant": "No",
+        "Weight(g)": 385,
+        "Battery Life (Hrs)": 20,
+      },
+    },
   },
 ];
 
@@ -407,10 +453,9 @@ const services = [
 ];
 
 const footer = {
-  ShopCartDescription: 
-    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-  ,
-    Department: [
+  ShopCartDescription:
+    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  Department: [
     "Fashion",
     "Education Product",
     "Frozen Food",
@@ -511,5 +556,5 @@ export {
   Payment,
   genre,
   Last,
-  productsDetails
+  productsDetails,
 };

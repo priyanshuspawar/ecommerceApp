@@ -21,11 +21,11 @@ const ProductCardLarge = (props: props) => {
  
 
   return (
-    <div ref={ref} className="flex bg-white flex-col flex-grow overflow-hidden">
-      <div className="w-full h-[50%] bg-[#F5F6F6] flex-shrink-0 relative overflow-hidden rounded-xl group">
+    <div ref={ref} className="flex bg-white flex-col flex-grow overflow-hidden h-full mb-3">
+      <div className="w-full lg:h-[35vh] bg-[#F5F6F6] relative overflow-hidden rounded-xl group flex">
         <motion.div
           className={
-            "w-[90px] items-center justify-center h-[90px] absolute z-50  hidden flex-grow bg-transparent border-2 border-green-950 rounded-full"
+            " w-[90px] items-center justify-center h-[90px] absolute z-50  hidden flex-grow bg-transparent border-2 border-green-950 rounded-full"
           }
           // variants={variants}
           animate={{ x: x - 40, y: y-45 }}
@@ -38,21 +38,22 @@ const ProductCardLarge = (props: props) => {
         >
           <p>Drag</p>
         </motion.div>
-
+        <div className="flex items-center justify-center w-[70%] h-[100%] m-auto ">
         <img
           src={props.ProductImage}
-        className="object-contain aspect-square m-auto pointer-events-none group-hover:scale-[115%] transition transform-gpu duration-150 ease-in"
-          width={"80%"}
-          height={"80%"}
+        className="pointer-events-none group-hover:scale-[115%] transition transform-gpu duration-150 ease-in self-center object-contain"
+          width={"95%"}
+          height={"95%"}
         />
+        </div>
 
     {/* like button */}
-     <div className="flex p-4 absolute right-2 top-2 h-fit justify-center items-center">
+     <div className="flex p-[3vh] absolute right-2 top-2 h-fit justify-center items-center">
            <div className="absolute z-50 flex-grow w-full h-full bg-transparent peer" />
            <div className="flex items-center justify-center peer-hover:bg-[#F9DCDC]  bg-white rounded-full absolute h-full w-full">
              <svg
                xmlns="http://www.w3.org/2000/svg"
-               className="h-4 w-4 z-10"
+               className="h-[3vh] w-[3vh] z-10"
                fill="#FFFFFF"
                viewBox="0 0 24 24"
                stroke="#4F4F4F"
@@ -70,7 +71,7 @@ const ProductCardLarge = (props: props) => {
       
       </div>
 
-      <div>
+      <div className="p-1">
         {/* product details */}
         <div className="px-1 mb-3 pointer-events-none pt-3">
           <div className="flex justify-between">
@@ -83,7 +84,7 @@ const ProductCardLarge = (props: props) => {
           <p className="font-light text-[9px] mb-1 line-clamp-1">{props?.Description}</p>
           <RatingStars rating={props?.Rating} ratedUsers={props?.RatedUsers} />
         </div>
-        <AddToCartButton />
+        <AddToCartButton width="23vh"/>
       </div>
     </div>
   );

@@ -16,18 +16,18 @@ interface props{
 
 const index = ({onClick}:props) => {
   return (
-    <div className="flex flex-row h-20 items-center z-30 justify-between overflow-hidden w-screen px-6 bg-white">
+    <div className="flex flex-row h-18 mb-3 items-center z-30 justify-between lg:justify-around overflow-hidden w-screen px-6 bg-white border-b-2">
         <div className="flex justify-center items-center h-full">
         <Logo className="self-center"/>
         </div>
-        <div className=" h-full w-fit gap-20 hidden
-         items-center">
+        <div className=" h-full w-fit gap-10 hidden lg:flex
+         items-center  2xl:w-[45%]">
         <NavOptions/>
         <SearchBar/>
         </div>
 
         {/* ham burger menu */}
-        <div className="" onClick={onClick}>
+        <div className="lg:hidden" onClick={onClick}>
           <HamBurgerMenu/>
 
         </div>
@@ -35,7 +35,7 @@ const index = ({onClick}:props) => {
 
 
 
-        <div className=" flex-row gap-12 hidden">
+        <div className="lg:flex flex-row gap-6 hidden">
         <MainButton title={"Account"} buttonImg={accountImg}/>
         <MainButton title={"Cart"} buttonImg={cartImg}/>
         </div>

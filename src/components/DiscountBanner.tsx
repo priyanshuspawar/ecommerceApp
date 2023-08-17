@@ -1,14 +1,13 @@
 import { useRef } from "react";
 import discountBanner from "../assets/discountBanner.png";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {useScroll,useTransform,motion} from "framer-motion"
 import CapsuleButton from "./CapsuleButton";
-
 const DiscountBanner = () => {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    // offset: ["end end", "start 1"],
+    offset: ["end end", "start 1"],
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1.2, 1]);
